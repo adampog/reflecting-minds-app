@@ -1,0 +1,632 @@
+<title>Nine Doors Concept Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+/* Layout: masthead, then a responsive deck of nine door cards, each a drawn plate above its label. */
+:root {
+  --bg:        #F6F7F5;
+  --surface:   #FFFFFF;
+  --surface-2: #EEF0ED;
+  --fg:        #1A1D21;
+  --muted:     #5B636B;
+  --line:      #DEE1DC;
+  --accent:    #35596B;
+  --blocked:   #8A392D;
+
+  /* plate palette — muted, shared across all nine so the deck reads as one set */
+  --ink:    #2C3A42;
+  --wash:   #C9D3D2;
+  --wash-2: #E3E7E4;
+  --warm:   #C08A63;
+  --warm-2: #E0C3A8;
+
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body:    "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #15171A;
+    --surface:   #1D2025;
+    --surface-2: #24282E;
+    --fg:        #E9E7E4;
+    --muted:     #9AA0A7;
+    --line:      #2C3137;
+    --accent:    #86AABD;
+    --blocked:   #D28878;
+    --ink:       #B9C6CC;
+    --wash:      #39474E;
+    --wash-2:    #2A3238;
+    --warm:      #C59371;
+    --warm-2:    #5C463A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:        #15171A;
+  --surface:   #1D2025;
+  --surface-2: #24282E;
+  --fg:        #E9E7E4;
+  --muted:     #9AA0A7;
+  --line:      #2C3137;
+  --accent:    #86AABD;
+  --blocked:   #D28878;
+  --ink:       #B9C6CC;
+  --wash:      #39474E;
+  --wash-2:    #2A3238;
+  --warm:      #C59371;
+  --warm-2:    #5C463A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 3rem 5rem;
+}
+
+.masthead { border-bottom: 2px solid var(--fg); padding-bottom: 1.25rem; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .75rem;
+}
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2.1rem, 7vw, 3.1rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+.standfirst {
+  font-family: var(--display);
+  font-size: clamp(1.02rem, 2.4vw, 1.22rem);
+  font-style: italic;
+  color: var(--muted);
+  margin: .9rem 0 0;
+  max-width: 46ch;
+}
+
+.banner {
+  margin-top: 2rem;
+  border: 1px solid var(--blocked);
+  border-left: 4px solid var(--blocked);
+  background: var(--surface);
+  padding: 1.1rem 1.25rem;
+  border-radius: 3px;
+}
+.banner .label {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blocked);
+  display: block;
+  margin-bottom: .4rem;
+}
+.banner p { margin: 0; font-size: .94rem; max-width: 70ch; }
+
+h2 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 3.5rem 0 .35rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--line);
+}
+.note { color: var(--muted); font-size: .92rem; margin: .6rem 0 1.75rem; max-width: 64ch; }
+
+/* ---- the deck ---- */
+.deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+.door {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.plate {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+}
+.meta { padding: .95rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.dnum {
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .1em;
+  color: var(--accent);
+}
+.dtitle { font-family: var(--display); font-size: 1.18rem; font-weight: 600; line-height: 1.2; }
+.ddoor {
+  font-family: var(--mono);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.dline { font-size: .88rem; color: var(--muted); margin: .35rem 0 0; }
+.fict {
+  margin-top: auto;
+  padding-top: .7rem;
+  font-family: var(--mono);
+  font-size: .62rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--blocked);
+}
+
+/* ---- language notes ---- */
+.lang { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.lcard { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.1rem; min-width: 0; }
+.lcard h3 { font-family: var(--body); font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); margin: 0 0 .5rem; }
+.lcard p { margin: 0; font-size: .89rem; color: var(--muted); }
+.lcard p + p { margin-top: .5rem; }
+
+.avoid { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.avoid li {
+  font-size: .9rem;
+  padding-left: 1.4rem;
+  position: relative;
+  max-width: 68ch;
+}
+.avoid li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--blocked);
+  font-size: .8rem;
+}
+
+.foot { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+.foot p { max-width: 70ch; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Concept sketches · 22 October 2026</p>
+    <h1>Nine Doors</h1>
+    <p class="standfirst">Visual concepts for the nine provisional entry doors, drawn to discuss a visual language.</p>
+  </header>
+
+  <div class="banner">
+    <span class="label">Not production assets</span>
+    <p>These are drawings made to argue about treatment, not artwork for the app. The creative direction is pre-produced hybrid live action and generated imagery, and the governing plan is explicit that this "does not authorize asset generation here." Scenario situations and door titles are unreviewed drafts. Nothing here is approved content.</p>
+  </div>
+
+  <h2>The deck</h2>
+  <p class="note">One plate per door. Each shows a situation rather than a subject or a mood — a thing happening that a person could step into. The nine share one palette and one line weight so the browse reads as a set, and none depicts a face.</p>
+
+  <div class="deck">
+
+    <!-- 1 · The hives -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="Three beehive boxes stand in grass beside a fence; one hive sits apart, closer to the fence than the others.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <rect y="210" width="400" height="90" fill="var(--wash)"/>
+        <!-- fence -->
+        <g stroke="var(--ink)" stroke-width="3" fill="none" opacity=".75">
+          <line x1="300" y1="120" x2="300" y2="250"/>
+          <line x1="340" y1="118" x2="340" y2="252"/>
+          <line x1="380" y1="116" x2="380" y2="254"/>
+          <line x1="288" y1="150" x2="400" y2="146"/>
+          <line x1="288" y1="196" x2="400" y2="192"/>
+        </g>
+        <!-- distant hives -->
+        <g fill="var(--warm-2)" stroke="var(--ink)" stroke-width="2.5">
+          <rect x="60" y="186" width="54" height="22" rx="2"/>
+          <rect x="63" y="166" width="48" height="20" rx="2"/>
+          <rect x="140" y="190" width="52" height="22" rx="2"/>
+          <rect x="143" y="171" width="46" height="19" rx="2"/>
+        </g>
+        <!-- the near hive, too close to the fence -->
+        <g fill="var(--warm)" stroke="var(--ink)" stroke-width="3">
+          <rect x="236" y="198" width="60" height="26" rx="2"/>
+          <rect x="240" y="175" width="52" height="23" rx="2"/>
+          <rect x="244" y="156" width="44" height="19" rx="2"/>
+        </g>
+        <!-- bees -->
+        <g stroke="var(--ink)" stroke-width="1.6" fill="none" opacity=".6">
+          <path d="M262 140 q8 -10 18 -4"/>
+          <path d="M288 128 q10 -8 20 -2"/>
+          <path d="M246 118 q7 -9 16 -5"/>
+        </g>
+        <g stroke="var(--ink)" stroke-width="2.5" opacity=".35">
+          <line x1="0" y1="248" x2="400" y2="244"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">01</span>
+        <span class="dtitle">The hives</span>
+        <span class="ddoor">Unresolved personal tension</span>
+        <p class="dline">The promise is visible in the picture: one hive sits where it was agreed it would not.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 2 · The riverbank -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A curving riverbank with two surveyor's stakes set at different points along it, each with a measuring line running to the water.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <path d="M0 300 L0 196 Q90 178 160 206 Q240 238 400 214 L400 300 Z" fill="var(--wash)"/>
+        <path d="M0 196 Q90 178 160 206 Q240 238 400 214" stroke="var(--ink)" stroke-width="3" fill="none"/>
+        <!-- stake A -->
+        <g stroke="var(--ink)" stroke-width="3">
+          <line x1="104" y1="96" x2="104" y2="186"/>
+          <path d="M104 96 l16 8 l-16 8 Z" fill="var(--ink)" stroke="none"/>
+        </g>
+        <line x1="104" y1="170" x2="176" y2="208" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <circle cx="176" cy="208" r="4.5" fill="var(--ink)"/>
+        <!-- stake B -->
+        <g stroke="var(--warm)" stroke-width="3">
+          <line x1="272" y1="108" x2="272" y2="226"/>
+          <path d="M272 108 l16 8 l-16 8 Z" fill="var(--warm)" stroke="none"/>
+        </g>
+        <line x1="272" y1="200" x2="212" y2="222" stroke="var(--warm)" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <circle cx="212" cy="222" r="4.5" fill="var(--warm)"/>
+        <!-- the gap between the two readings -->
+        <g stroke="var(--ink)" stroke-width="1.4" opacity=".8">
+          <line x1="176" y1="246" x2="212" y2="246"/>
+          <line x1="176" y1="241" x2="176" y2="251"/>
+          <line x1="212" y1="241" x2="212" y2="251"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">02</span>
+        <span class="dtitle">The riverbank</span>
+        <span class="ddoor">Seeing things differently</span>
+        <p class="dline">Two stakes, two correct readings, and the measured gap between them.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 3 · The last barrel -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A ship's hold with empty barrel rings and one remaining sealed barrel; a hatch above shows open sea with no land in sight.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <!-- hull ribs -->
+        <g stroke="var(--ink)" stroke-width="2.5" fill="none" opacity=".55">
+          <path d="M34 300 Q22 180 56 86"/>
+          <path d="M366 300 Q378 180 344 86"/>
+          <line x1="0" y1="252" x2="400" y2="252"/>
+        </g>
+        <!-- hatch of sky -->
+        <rect x="140" y="30" width="120" height="58" rx="2" fill="var(--wash)" stroke="var(--ink)" stroke-width="3"/>
+        <g stroke="var(--ink)" stroke-width="1.8" opacity=".55">
+          <line x1="152" y1="72" x2="248" y2="72"/>
+          <line x1="158" y1="80" x2="242" y2="80"/>
+        </g>
+        <!-- empty rings where barrels stood -->
+        <g stroke="var(--ink)" stroke-width="2.2" fill="none" opacity=".45" stroke-dasharray="6 5">
+          <ellipse cx="96" cy="246" rx="34" ry="11"/>
+          <ellipse cx="176" cy="248" rx="34" ry="11"/>
+          <ellipse cx="320" cy="246" rx="34" ry="11"/>
+        </g>
+        <!-- the last barrel -->
+        <g stroke="var(--ink)" stroke-width="3">
+          <path d="M218 170 q-16 38 0 76 l56 0 q16 -38 0 -76 Z" fill="var(--warm)"/>
+          <ellipse cx="246" cy="170" rx="28" ry="9" fill="var(--warm-2)"/>
+          <line x1="215" y1="196" x2="277" y2="196" stroke-width="2.2"/>
+          <line x1="215" y1="220" x2="277" y2="220" stroke-width="2.2"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">03</span>
+        <span class="dtitle">The last barrel</span>
+        <span class="ddoor">Uncertainty</span>
+        <p class="dline">Empty rings for what is gone, one barrel left, and a hatch showing no land.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 4 · The bridge or the ford -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A river with an old bridge upstream and a shallow ford downstream; two clusters of rooftops sit on either side, one nearer each crossing.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <path d="M0 128 Q120 150 200 148 Q290 146 400 170 L400 206 Q290 182 200 184 Q120 186 0 164 Z" fill="var(--wash)" stroke="var(--ink)" stroke-width="2.5"/>
+        <!-- old bridge -->
+        <g stroke="var(--ink)" stroke-width="3" fill="none">
+          <path d="M66 140 q26 -34 52 0"/>
+          <line x1="60" y1="140" x2="124" y2="140"/>
+          <line x1="60" y1="140" x2="60" y2="176"/>
+          <line x1="124" y1="140" x2="124" y2="178"/>
+        </g>
+        <!-- ford: stones -->
+        <g fill="var(--ink)" opacity=".7">
+          <ellipse cx="282" cy="162" rx="11" ry="6"/>
+          <ellipse cx="306" cy="172" rx="10" ry="5.5"/>
+          <ellipse cx="330" cy="166" rx="11" ry="6"/>
+          <ellipse cx="352" cy="178" rx="9" ry="5"/>
+        </g>
+        <!-- hamlet near the bridge -->
+        <g fill="var(--warm-2)" stroke="var(--ink)" stroke-width="2.5">
+          <path d="M52 238 l24 -20 l24 20 Z"/>
+          <rect x="58" y="238" width="36" height="26"/>
+          <path d="M96 244 l18 -15 l18 15 Z"/>
+          <rect x="101" y="244" width="27" height="20"/>
+        </g>
+        <!-- hamlet near the ford -->
+        <g fill="var(--warm)" stroke="var(--ink)" stroke-width="2.5">
+          <path d="M288 246 l20 -17 l20 17 Z"/>
+          <rect x="293" y="246" width="30" height="22"/>
+          <path d="M330 240 l22 -18 l22 18 Z"/>
+          <rect x="336" y="240" width="32" height="28"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">04</span>
+        <span class="dtitle">The bridge or the ford</span>
+        <span class="ddoor">Divided group</span>
+        <p class="dline">The argument is the crossing. The picture shows what the crossing decides.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 5 · The copied letter -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A writing desk with an original letter beside a half-finished copy; the copying hand has paused and the nib rests above an unfinished line.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <rect y="222" width="400" height="78" fill="var(--wash)"/>
+        <line x1="0" y1="222" x2="400" y2="222" stroke="var(--ink)" stroke-width="3"/>
+        <!-- original, propped -->
+        <g transform="rotate(-6 120 150)">
+          <rect x="54" y="78" width="118" height="146" rx="2" fill="var(--surface)" stroke="var(--ink)" stroke-width="2.5"/>
+          <g stroke="var(--ink)" stroke-width="2" opacity=".55">
+            <line x1="70" y1="106" x2="156" y2="106"/><line x1="70" y1="124" x2="156" y2="124"/>
+            <line x1="70" y1="142" x2="156" y2="142"/><line x1="70" y1="160" x2="140" y2="160"/>
+            <line x1="70" y1="178" x2="156" y2="178"/><line x1="70" y1="196" x2="128" y2="196"/>
+          </g>
+        </g>
+        <!-- the copy, stopped mid-line -->
+        <rect x="212" y="92" width="122" height="132" rx="2" fill="var(--surface)" stroke="var(--ink)" stroke-width="3"/>
+        <g stroke="var(--ink)" stroke-width="2" opacity=".55">
+          <line x1="228" y1="118" x2="318" y2="118"/><line x1="228" y1="136" x2="318" y2="136"/>
+          <line x1="228" y1="154" x2="318" y2="154"/>
+        </g>
+        <line x1="228" y1="172" x2="268" y2="172" stroke="var(--warm)" stroke-width="2.4"/>
+        <!-- nib, lifted -->
+        <g stroke="var(--ink)" stroke-width="3" fill="none">
+          <line x1="300" y1="118" x2="276" y2="164"/>
+          <path d="M276 164 l-5 10 l9 -5 Z" fill="var(--ink)" stroke="none"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">05</span>
+        <span class="dtitle">The copied letter</span>
+        <span class="ddoor">Another person's perspective</span>
+        <p class="dline">The copy stops mid-line. The pause is the whole situation.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 6 · Twice told -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="Three mugs on an inn table; two ring-marks lead toward a third mug, and the trail of marks stops short with no source behind it.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <rect y="168" width="400" height="132" fill="var(--wash)"/>
+        <line x1="0" y1="168" x2="400" y2="168" stroke="var(--ink)" stroke-width="3"/>
+        <!-- grain -->
+        <g stroke="var(--ink)" stroke-width="1.3" opacity=".3">
+          <line x1="0" y1="206" x2="400" y2="206"/>
+          <line x1="0" y1="246" x2="400" y2="246"/>
+          <line x1="0" y1="282" x2="400" y2="282"/>
+        </g>
+        <!-- ring marks: the claim's route -->
+        <g stroke="var(--ink)" stroke-width="2.2" fill="none" opacity=".5">
+          <ellipse cx="78" cy="238" rx="25" ry="10"/>
+          <ellipse cx="156" cy="226" rx="25" ry="10"/>
+        </g>
+        <!-- where the source would be: nothing -->
+        <g stroke="var(--ink)" stroke-width="2" fill="none" opacity=".3" stroke-dasharray="5 5">
+          <ellipse cx="38" cy="266" rx="24" ry="10"/>
+        </g>
+        <!-- the mug being spoken over -->
+        <g stroke="var(--ink)" stroke-width="3" fill="var(--warm-2)">
+          <path d="M238 176 l10 70 q2 12 14 12 l34 0 q12 0 14 -12 l10 -70 Z"/>
+          <path d="M320 196 q24 6 18 28 q-5 18 -24 16" fill="none"/>
+          <ellipse cx="270" cy="176" rx="32" ry="9" fill="var(--wash)"/>
+        </g>
+        <!-- speech, dissipating -->
+        <g stroke="var(--ink)" stroke-width="2" fill="none" opacity=".5">
+          <path d="M190 118 q18 -16 40 -8"/>
+          <path d="M214 90 q20 -16 42 -6"/>
+          <path d="M250 66 q18 -12 36 -4" opacity=".6"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">06</span>
+        <span class="dtitle">Twice told</span>
+        <span class="ddoor">Something seen or heard</span>
+        <p class="dline">Two ring-marks where the claim has been, and an empty outline where its source should be.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 7 · Two births -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A lantern at a fork in a night road; one track leads left and one right, each toward a single distant lit window.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <!-- the two tracks -->
+        <path d="M200 300 L96 136" stroke="var(--ink)" stroke-width="3" fill="none"/>
+        <path d="M200 300 L306 140" stroke="var(--ink)" stroke-width="3" fill="none"/>
+        <path d="M212 300 L120 140" stroke="var(--ink)" stroke-width="1.6" opacity=".4" fill="none"/>
+        <path d="M188 300 L284 144" stroke="var(--ink)" stroke-width="1.6" opacity=".4" fill="none"/>
+        <!-- left house, one window -->
+        <g stroke="var(--ink)" stroke-width="2.5" fill="var(--wash)">
+          <path d="M58 122 l24 -20 l24 20 Z"/>
+          <rect x="63" y="122" width="38" height="28"/>
+        </g>
+        <rect x="74" y="130" width="14" height="12" fill="var(--warm)"/>
+        <!-- right house, one window -->
+        <g stroke="var(--ink)" stroke-width="2.5" fill="var(--wash)">
+          <path d="M292 126 l24 -20 l24 20 Z"/>
+          <rect x="297" y="126" width="38" height="28"/>
+        </g>
+        <rect x="308" y="134" width="14" height="12" fill="var(--warm)"/>
+        <!-- lantern at the fork -->
+        <g stroke="var(--ink)" stroke-width="3" fill="var(--warm-2)">
+          <path d="M186 236 l6 -30 l16 0 l6 30 Z"/>
+          <line x1="200" y1="206" x2="200" y2="192"/>
+          <path d="M192 192 q8 -8 16 0" fill="none"/>
+        </g>
+        <circle cx="200" cy="222" r="30" fill="var(--warm)" opacity=".18"/>
+        <circle cx="200" cy="222" r="46" fill="var(--warm)" opacity=".09"/>
+      </svg>
+      <div class="meta">
+        <span class="dnum">07</span>
+        <span class="dtitle">Two births</span>
+        <span class="ddoor">Values in tension</span>
+        <p class="dline">One lantern, two roads, a lit window at the end of each. Nothing in the picture ranks them.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 8 · The longer way -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="A street map showing a short direct route between two lamps and a longer looping route drawn over it, worn darker from repeated use.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <!-- street grid -->
+        <g stroke="var(--ink)" stroke-width="2" opacity=".28">
+          <line x1="60" y1="40" x2="60" y2="268"/>
+          <line x1="160" y1="40" x2="160" y2="268"/>
+          <line x1="260" y1="40" x2="260" y2="268"/>
+          <line x1="340" y1="40" x2="340" y2="268"/>
+          <line x1="30" y1="86" x2="376" y2="86"/>
+          <line x1="30" y1="166" x2="376" y2="166"/>
+          <line x1="30" y1="238" x2="376" y2="238"/>
+        </g>
+        <!-- the short way -->
+        <path d="M60 238 L60 166 L260 166" stroke="var(--ink)" stroke-width="2.4" fill="none" stroke-dasharray="7 6" opacity=".6"/>
+        <!-- the longer way, worn in -->
+        <path d="M60 238 L160 238 L160 86 L340 86 L340 166 L260 166" stroke="var(--warm)" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- lamps at each end -->
+        <g stroke="var(--ink)" stroke-width="3" fill="var(--warm-2)">
+          <circle cx="60" cy="238" r="8"/>
+          <circle cx="260" cy="166" r="8"/>
+        </g>
+        <circle cx="60" cy="238" r="20" fill="var(--warm)" opacity=".14"/>
+        <circle cx="260" cy="166" r="20" fill="var(--warm)" opacity=".14"/>
+      </svg>
+      <div class="meta">
+        <span class="dnum">08</span>
+        <span class="dtitle">The longer way</span>
+        <span class="ddoor">Self-understanding</span>
+        <p class="dline">The short route is dotted and unused. The long one is worn in. No explanation offered.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+    <!-- 9 · The same bowl -->
+    <article class="door">
+      <svg class="plate" viewBox="0 0 400 300" role="img" aria-label="Five bowls of the same form on a shelf, each with a slightly different profile; one sits turned to show its curve.">
+        <rect width="400" height="300" fill="var(--wash-2)"/>
+        <!-- shelf -->
+        <line x1="20" y1="222" x2="380" y2="222" stroke="var(--ink)" stroke-width="3"/>
+        <rect x="20" y="222" width="360" height="9" fill="var(--wash)"/>
+        <!-- four bowls, subtly different profiles -->
+        <g stroke="var(--ink)" stroke-width="2.8" fill="var(--wash)">
+          <path d="M44 176 q4 46 32 46 q28 0 32 -46 Z"/>
+          <path d="M126 170 q2 52 30 52 q28 0 30 -52 Z"/>
+          <path d="M206 180 q7 42 30 42 q23 0 30 -42 Z"/>
+          <path d="M286 174 q3 48 29 48 q26 0 29 -48 Z"/>
+        </g>
+        <g stroke="var(--ink)" stroke-width="2.8" fill="var(--wash-2)">
+          <ellipse cx="76" cy="176" rx="32" ry="8"/>
+          <ellipse cx="156" cy="170" rx="30" ry="8"/>
+          <ellipse cx="236" cy="180" rx="30" ry="8"/>
+          <ellipse cx="315" cy="174" rx="29" ry="8"/>
+        </g>
+        <!-- the fifth, turned on its side to show the curve -->
+        <g stroke="var(--warm)" stroke-width="3.2" fill="none">
+          <path d="M150 272 q46 -4 46 -30 q0 -26 -46 -30" />
+          <path d="M150 272 q-10 -30 0 -60" stroke-dasharray="6 5" opacity=".7"/>
+        </g>
+      </svg>
+      <div class="meta">
+        <span class="dnum">09</span>
+        <span class="dtitle">The same bowl</span>
+        <span class="ddoor">Just curious</span>
+        <p class="dline">Five of the same bowl, none identical. The turned one shows the curve nobody planned.</p>
+        <span class="fict">Fictional · draft</span>
+      </div>
+    </article>
+
+  </div>
+
+  <h2>What the drawings are arguing</h2>
+  <p class="note">Four decisions sit behind the deck. Each is contestable, and each is the kind of thing worth settling before any real asset is produced.</p>
+
+  <div class="lang">
+    <div class="lcard">
+      <h3>Situations, not subjects</h3>
+      <p>Each plate shows something happening that a person could step into, rather than an object or a mood. A picture of a beehive is a subject; a hive standing where it was promised not to stand is a situation.</p>
+      <p>This follows SA01 directly: entrances are situational, never categories.</p>
+    </div>
+    <div class="lcard">
+      <h3>No faces</h3>
+      <p>Nobody is depicted. A face invites the viewer to read age, gender, class or ethnicity into the scenario, which is the identity inference FR02 forbids the app from making.</p>
+      <p>Absence of people also keeps the situation available: the viewer can occupy it rather than watch someone else in it.</p>
+    </div>
+    <div class="lcard">
+      <h3>One palette, one line</h3>
+      <p>All nine share a muted palette and a single line weight, so a swipe through the deck reads as one set of related invitations rather than nine competing posters.</p>
+      <p>Warm accent marks the one element carrying the tension — the near hive, the second stake, the worn route.</p>
+    </div>
+    <div class="lcard">
+      <h3>The tension is drawn, not captioned</h3>
+      <p>Where possible the difficulty is visible in the composition: a measured gap, a stopped line, an empty outline where a source should be, a dotted route nobody takes.</p>
+      <p>This matters for accessibility. If a plate needs its caption to make sense, the text alternative cannot carry the core content as required.</p>
+    </div>
+  </div>
+
+  <h2>What to avoid</h2>
+  <ul class="avoid">
+    <li>Faces, bodies, or anything from which a viewer can read an identity into the scenario.</li>
+    <li>Contemporary political or religious markers — flags, insignia, recognisable settings. The scenario should not arrive already taking a side.</li>
+    <li>Picturesque cultural detail used as decoration. The spec warns against presenting generic cultural experiences, and an unfamiliar setting that is merely ornamental fails that test.</li>
+    <li>Visual hierarchy across the nine. If one plate is more arresting than the rest, the deck has ranked the doors, and the shuffle intended to keep them equal cannot undo it.</li>
+    <li>Any image implying an outcome — a resolved handshake, a clear sky after storm. That is AT17 territory in pictures.</li>
+    <li>Imagery that only resolves in motion. These need to work as the still frame a reel opens on.</li>
+  </ul>
+
+  <h2>Open questions for the content owner</h2>
+  <ul class="avoid">
+    <li>Is the displaced setting right, or does it read as evasive to someone in live difficulty? Worth testing two contemporary plates against two displaced ones.</li>
+    <li>Should the plates be drawn, photographed, or hybrid? The creative direction says hybrid live action and generated imagery; drawings may undercut that, or may suit the no-faces constraint better than photography can.</li>
+    <li>Does every door need a plate, or do the two low-stakes doors — "Just curious" and "Self-understanding" — want a quieter treatment that signals a shorter path?</li>
+  </ul>
+
+  <footer class="foot">
+    <p>Nine concept sketches, 22 October 2026. Door titles from <em>Mobile Software Specification</em> v0.2 §2; scenario titles and situations are unreviewed drafts. Drawn as inline vector artwork; no photographic or generated assets were produced.</p>
+  </footer>
+
+</div>
