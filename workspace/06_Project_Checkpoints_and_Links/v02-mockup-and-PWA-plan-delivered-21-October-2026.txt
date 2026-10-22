@@ -1,0 +1,18 @@
+Reflecting Minds v0.2 mockup and PWA plan
+21 October 2026
+
+The new v0.2 mockup and the subsequent PWA implementation plan are saved in Sources:
+
+- Reflecting_Minds_v02_Mockup_Walkthrough_2026-10-21.mp4: 3 minutes 3 seconds, silent and captioned, showing the phone workflow.
+- Reflecting_Minds_v02_PWA_Implementation_Plan.md: proposed architecture, data boundaries, implementation phases, acceptance gates and open decisions.
+- The accompanying mockup brief, independent QA summary and tap-through ZIP explain the changes, review controls and limitations.
+
+These use NEWReflecting_Minds_Mobile_Software_Specification_v0.2_2026-10-21.docx, titled “Mobile Software Specification — Revised for Agreed Beta Decisions,” Version 0.2, dated 21 October 2026. The exact source was read in full. Its SHA256 is fba4cd12044956341bafa743a9c20e45da7863c91dffafae80813272557ecfa5.
+
+The mockup shows nine provisional entry doors, fictional/personal/neutral choices, the flexible A/B/C journeys, privacy before typing, deterministic scenarios, explicit local save, selected-field export and deletion. Live AI, in-app feedback prompts and working groups are excluded under v0.2.
+
+Independent mockup review passed 16 checks after corrections and inspected 17 frames across the encoded video. The implementation plan was independently reviewed after corrections. Production network, hosting/log, real-device accessibility, storage durability and release tests remain future work; these review results do not establish a production-ready PWA or validate the practice.
+
+Use each source's Download action if a preview is unavailable. For the tap-through, extract the ZIP and open reflecting-minds-v02-viewer/app/index.html in a browser. Use fictional sample text. Its explicit Save control uses local browser storage; it is a disposable demonstrator, not the proposed production storage architecture.
+
+The five earlier videos and both specification versions remain available. No repository changes or production implementation were made for this delivery. Work is paused for review; the plan does not authorize a build or deployment.

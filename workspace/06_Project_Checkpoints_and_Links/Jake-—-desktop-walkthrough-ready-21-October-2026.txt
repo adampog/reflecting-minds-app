@@ -1,0 +1,12 @@
+For Jake Davis (jhdavis@vijja.net)
+21 October 2026, 16:46 UTC
+
+Jake, the desktop web-browser walkthrough is ready too. Please have a look and share your feedback. The original mobile walkthrough is still available unchanged.
+
+Desktop video: Reflecting_Minds_App_Desktop_Walkthrough_2026-10-21.mp4
+Mobile video: Reflecting_Minds_App_Mobile_Walkthrough_2026-10-21.mp4
+
+Both are in Reflecting Minds App → Sources. Open the relevant file’s actions menu and choose Download.
+https://chatgpt.com/g/g-p-6ad8e1ee8bec8191a8dc3dbf91475514/project?tab=sources
+
+The desktop video is a 154.88-second, 1280 × 836 low-fidelity mockup walkthrough. This update completes the desktop-video follow-up promised in the earlier mobile review note. Both OpenRig seats are paused; no further development is underway. No repository additions, commits or pushes were made for this desktop delivery; the original checkout remains clean at 97e145c.

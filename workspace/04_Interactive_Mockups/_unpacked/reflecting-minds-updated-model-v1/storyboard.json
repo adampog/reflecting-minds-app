@@ -1,0 +1,337 @@
+[
+ {
+  "part": "Intro",
+  "title": "What this mockup shows",
+  "basis": "Prototype",
+  "screen": {
+   "head": "",
+   "rows": [
+    "Ideas from the updated model, for review.",
+    "Each screen says whether Jake asked for it, ChatGPT proposed it, or it is still undecided.",
+    "Nothing here is a working beta."
+   ],
+   "buttons": []
+  },
+  "caption": "A low-fidelity mockup of the updated model. Each screen says where its idea came from. All fictional; nothing is built."
+ },
+ {
+  "part": "Discovery",
+  "title": "A finite deck of entries",
+  "basis": "Jake asked: about nine entries, swipe or random · Deck controls: ChatGPT proposal",
+  "screen": {
+   "head": "Choose what draws you in · card 4 of 9",
+   "rows": [
+    "Two routes, one map",
+    "A group can't agree on the way home. What pulls your attention first?",
+    "Unreviewed prototype example.",
+    "Swipe for the next card. After nine, the deck ends."
+   ],
+   "buttons": [
+    "Try this",
+    "Surprise me",
+    "Browse all",
+    "Neutral introduction"
+   ]
+  },
+  "caption": "Jake asked for about nine entries to swipe through or pick at random. This proposed deck is finite and shuffled per visit; the person chooses."
+ },
+ {
+  "part": "Discovery",
+  "title": "Browse all nine",
+  "basis": "ChatGPT proposal · Titles: prototype placeholders",
+  "screen": {
+   "head": "All nine entries (unreviewed prototype examples)",
+   "rows": [
+    "Morning on the trail · Reading the swell · The unanswered message",
+    "Two routes, one map · Market-day noise · A borrowed tool",
+    "The late train · Kitchen-table budget · A shared field"
+   ],
+   "buttons": [
+    "Surprise me",
+    "Neutral introduction",
+    "Back"
+   ]
+  },
+  "caption": "Browse all shows every option without swiping. All nine titles are invented placeholders."
+ },
+ {
+  "part": "Discovery",
+  "title": "Surprise me",
+  "basis": "ChatGPT proposal",
+  "screen": {
+   "head": "Surprise me",
+   "rows": [
+    "Picked: Market-day noise",
+    "Chosen at random from the nine, not from anything about you.",
+    "Shuffling is a discovery aid, not an experiment."
+   ],
+   "buttons": [
+    "Try this",
+    "Pick again",
+    "Back to the deck"
+   ]
+  },
+  "caption": "A random pick only helps people start. It never assigns an entry from who they seem to be."
+ },
+ {
+  "part": "Core journey",
+  "title": "Same practice behind every card",
+  "basis": "Original specification, unchanged",
+  "screen": {
+   "head": "Notice · exercise notice-v1",
+   "rows": [
+    "Notice where your attention keeps returning.",
+    "Then let in other parts of experience: sounds, light, touch, whatever is there.",
+    "No particular sensation is needed.",
+    "Placeholder text, awaiting review."
+   ],
+   "buttons": [
+    "Pause",
+    "Skip",
+    "Continue"
+   ]
+  },
+  "caption": "Every card leads to the same shared practice. Nine entries are not nine exercises."
+ },
+ {
+  "part": "Core journey",
+  "title": "Motivation, in their own terms",
+  "basis": "Original specification, unchanged",
+  "screen": {
+   "head": "Motivation",
+   "rows": [
+    "What moves you here, in your words?",
+    "Your words: \"Wanting to be heard over the noise.\"",
+    "Other answers: mixed · uncertain · this framing doesn't fit me · skip"
+   ],
+   "buttons": [
+    "Continue"
+   ]
+  },
+  "caption": "Motivation in their own words; they can reject the framing itself. Nothing is scored."
+ },
+ {
+  "part": "Core journey",
+  "title": "Discern, respond, finish",
+  "basis": "Discern/respond: original specification · Endings: ChatGPT proposal",
+  "screen": {
+   "head": "Discern · Respond · Finish",
+   "rows": [
+    "Know: the stall is loud. I guess (mine): they don't care. Unsure: if it bothers others.",
+    "Next: act · ask · pause · leave. Chosen: pause.",
+    "Finish: keep · explore further · pause here · finish for now. All equal.",
+    "Chosen: keep. Saved on this device only."
+   ],
+   "buttons": [
+    "Done"
+   ]
+  },
+  "caption": "Known, guessed and unsure stay separate. They choose to pause, then keep the reflection; no ending counts as best."
+ },
+ {
+  "part": "Value signals",
+  "title": "Optional value signals",
+  "basis": "Jake asked: signs of value from behaviour, no formal study · Signal list: ChatGPT proposal",
+  "screen": {
+   "head": "Help the beta learn? (optional)",
+   "rows": [
+    "If you agree, the beta counts only: whether you saved, which ending you chose, whether you came back, whether you added to a reflection.",
+    "Never your words. Off unless you turn it on.",
+    "These are hints, not proof that it helped."
+   ],
+   "buttons": [
+    "Turn on",
+    "No thanks"
+   ]
+  },
+  "caption": "Jake wanted signs of value without a survey question. Counting saves and returns is one proposal: a hint, not proof."
+ },
+ {
+  "part": "Value signals",
+  "title": "Return and revise",
+  "basis": "ChatGPT proposal, serving Jake's request",
+  "screen": {
+   "head": "Saved 3 days ago · Market-day noise",
+   "rows": [
+    "Original (unchanged): \"Wanting to be heard over the noise.\"",
+    "Added today: \"The stallholder was shouting to be heard too.\"",
+    "Still unsure: whether to say anything."
+   ],
+   "buttons": [
+    "Save addition",
+    "Finish"
+   ]
+  },
+  "caption": "Returning and adding to a reflection may signal value. The original stays as it was."
+ },
+ {
+  "part": "Value signals",
+  "title": "What changed, if anything?",
+  "basis": "Jake asked: room beyond Global Attentiveness",
+  "screen": {
+   "head": "What changed for you? (any, or none)",
+   "rows": [
+    "Noticed something new · Understood another view · Became more unsure · Found a choice · Nothing changed",
+    "Global Attentiveness is one guiding question among several.",
+    "More uncertainty can be a good result."
+   ],
+   "buttons": [
+    "Continue"
+   ]
+  },
+  "caption": "Global Attentiveness stays a guiding question, but people can report other changes, or none."
+ },
+ {
+  "part": "Strategies",
+  "title": "Propose a strategy",
+  "basis": "Jake asked: users and groups suggest strategies · Fields: ChatGPT proposal",
+  "screen": {
+   "head": "Your strategy (private)",
+   "rows": [
+    "Name: \"Say back what I heard first\"",
+    "Why it might help (my guess): people ease off when they feel heard.",
+    "Steps: repeat their point; ask if I got it right. Risk: can feel fake.",
+    "If ever shared, credit as: named · pseudonym · anonymous (proposed).",
+    "Kept private. Submitting to the team: undecided."
+   ],
+   "buttons": [
+    "Save privately"
+   ]
+  },
+  "caption": "People propose their own strategy and can try it \"as if\". It stays private unless they choose otherwise."
+ },
+ {
+  "part": "Strategies",
+  "title": "Try it, then review",
+  "basis": "ChatGPT proposal",
+  "screen": {
+   "head": "Strategy trial · version 1",
+   "rows": [
+    "Intended: a calmer exchange.",
+    "Observed: they kept talking; I felt less rushed.",
+    "Version 2: \"Only when I'm unsure what they meant.\"",
+    "Popularity is never shown as proof that a strategy works."
+   ],
+   "buttons": [
+    "Save version 2"
+   ]
+  },
+  "caption": "Intended and observed effects stay separate; the strategy can be revised. Popularity is not evidence."
+ },
+ {
+  "part": "Many voices",
+  "title": "Three parties, more than three views",
+  "basis": "Jake asked: multi-party, multilingual readiness · Model: ChatGPT proposal",
+  "screen": {
+   "head": "Fictional example · A shared field",
+   "rows": [
+    "Parties: orchard families · grazing co-op · town council",
+    "Grazing co-op, member 1: \"Close the path in lambing season.\"",
+    "Grazing co-op, member 2: \"Keep it open; we need visitors.\"",
+    "Orchard families and co-op: disagree on timing. Council and co-op: unknown."
+   ],
+   "buttons": []
+  },
+  "caption": "A fictional three-party example. One party holds two views; no group speaks with one voice."
+ },
+ {
+  "part": "Many voices",
+  "title": "Original words and translation",
+  "basis": "Jake asked: different languages and cultures · Display: ChatGPT proposal",
+  "screen": {
+   "head": "Original and translation",
+   "rows": [
+    "Original (Spanish, words of co-op member 2): \"Este campo es nuestra querencia.\"",
+    "Candidates: \"our home ground\" · \"where we belong\" · \"where we draw strength\"",
+    "Contributor: none of these quite fits.",
+    "Unresolved. Not a reviewed translation."
+   ],
+   "buttons": []
+  },
+  "caption": "The original stays beside possible translations, and the gap in meaning is kept. Language says nothing about identity."
+ },
+ {
+  "part": "Groups (proposed)",
+  "title": "Invitation to a private group",
+  "basis": "Jake asked tentatively · Controls: ChatGPT proposal",
+  "screen": {
+   "head": "Invitation · Practice circle (fictional)",
+   "rows": [
+    "Purpose: try one strategy on a fictional scenario.",
+    "Before joining: purpose, members, what is visible.",
+    "Separate choices: join · see shared items · add a strategy · evaluation · research data.",
+    "Joining shares nothing private. The admin role gives no access to private journals.",
+    "Undecided: invite caps, expiry, who can create groups."
+   ],
+   "buttons": [
+    "Join",
+    "Decline"
+   ]
+  },
+  "caption": "A tentative group path. An invitation is not membership, membership is not access to private reflections, and each permission is a separate choice."
+ },
+ {
+  "part": "Groups (proposed)",
+  "title": "Share one chosen item",
+  "basis": "ChatGPT proposal",
+  "screen": {
+   "head": "Share with Practice circle?",
+   "rows": [
+    "Selected: strategy \"Say back what I heard first\" (v2)",
+    "Not selected: your reflections and answers.",
+    "Preview first. Nothing is sent in this mockup."
+   ],
+   "buttons": [
+    "Preview",
+    "Cancel"
+   ]
+  },
+  "caption": "Sharing is item by item, with a preview. Only a strategy is shared here."
+ },
+ {
+  "part": "Open tensions",
+  "title": "Open question 1: private or group?",
+  "basis": "Undecided",
+  "screen": {
+   "head": "Not resolved",
+   "rows": [
+    "Proposed: no account; private reflection stays on this device.",
+    "Groups would need some identity, membership, shared content and a way to revoke.",
+    "How both can hold is not decided."
+   ],
+   "buttons": []
+  },
+  "caption": "The beta proposes on-device reflection with no account, but groups need shared identity. This mockup picks no answer."
+ },
+ {
+  "part": "Open tensions",
+  "title": "Open question 2: AI later",
+  "basis": "Undecided",
+  "screen": {
+   "head": "Not resolved",
+   "rows": [
+    "Proposed for the first beta: no AI.",
+    "An earlier mockup showed a scripted voice conversation with a simulated AI.",
+    "That shows one possible style. It is not evidence that AI belongs in the first beta."
+   ],
+   "buttons": []
+  },
+  "caption": "The first beta is proposed without AI. The earlier voice video is a separate idea, not a reason to add AI."
+ },
+ {
+  "part": "Outro",
+  "title": "What still needs deciding",
+  "basis": "Undecided",
+  "screen": {
+   "head": "",
+   "rows": [
+    "Real entry content, languages and reviewers.",
+    "Invite caps and who can create groups; what group content is stored.",
+    "Outcome dimensions; whether strategies can be submitted.",
+    "Review needed before any real conflict work."
+   ],
+   "buttons": []
+  },
+  "caption": "Nothing here is built or approved for production. These decisions remain open."
+ }
+]

@@ -1,0 +1,12 @@
+Reflecting Minds App — accepted mockup delivery checkpoint
+21 October 2026, 16:30 UTC
+
+The QA-accepted phone walkthrough is now stored in this project’s Sources as Reflecting_Minds_App_Mobile_Walkthrough_2026-10-21.mp4. Use the file’s actions menu and Download to view it; this source does not show an inline video preview.
+
+The video covers flows A, B and C plus brief navigation from the existing version 0.1 software specification. It is a low-fidelity mockup with sample questions and scenarios and a persistent mockup label, not a production application. Duration: 154.8 seconds (under five minutes). Format: 390 × 880 H.264 MP4, silent with captions. File size: 2,116,417 bytes.
+
+Accepted checkpoint: 97e145c. Both OpenRig seats, Claude and Codex, are paused after delivery; no further development is underway in this checkpoint. Production framework and platform decisions remain open.
+
+The uploaded project file was downloaded back and verified byte-for-byte by SHA-256: 6c09192981cee894fd5889cd901c43f962e8e3853f92ac915b1d94bfbb87862c.
+
+This dated checkpoint supersedes the earlier video-pending and work-in-progress status notes. The existing specification, repository link and prior project sources remain available.

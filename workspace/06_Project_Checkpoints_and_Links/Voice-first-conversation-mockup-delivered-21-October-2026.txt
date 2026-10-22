@@ -1,0 +1,14 @@
+Reflecting Minds App — voice-first conversation mockup
+21 October 2026, 17:29 UTC
+
+A third proposed app option is now illustrated: talking and listening through the same A/B/C workflows and navigation rather than typing or needing to read the screen. The demonstration uses scripted spoken User/AI turns, comic-style speech bubbles and the label “Example conversation workflow.” It does not implement a live voice engine.
+
+New files in Sources:
+Reflecting_Minds_App_Voice_First_Conversation_2026-10-21.mp4
+Reflecting_Minds_App_Voice_First_Addendum_2026-10-21.md
+
+The video is 4:28.02 at 1280 × 720. Use its file actions menu → Download. The separate addendum describes the proposed voice equivalents and unresolved product questions; the original version 0.1 specification remains unchanged.
+
+Technical QA passed. This checkpoint does not include a subjective listening-quality review. The uploaded video and addendum were downloaded back and their exact file identities verified.
+
+The earlier mobile and desktop videos, project notes and links remain available. The repository is untouched. Both OpenRig app seats are paused with no outstanding obligations for this delivery.

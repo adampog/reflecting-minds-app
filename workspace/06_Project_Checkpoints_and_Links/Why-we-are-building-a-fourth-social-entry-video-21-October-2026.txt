@@ -1,0 +1,15 @@
+Reflecting Minds App: why we are building a fourth video
+21 October 2026, 18:00 UTC
+
+Alan requested a fourth video showing how social-media entry would work. The comparison point is the original Minds and Understanding conversation’s final response, from “5. The consolidated direction for Reflecting Minds” through the end.
+
+The current specification covers the main motivation → discernment → action → review cycle. The first three videos show the phone interface, desktop interface and a voice-first example conversation. They do not yet demonstrate the path from a short-form social post or reel into a matching authored entry experience. The fourth video fills that demonstration gap.
+
+Planned scope: a simulated social post/reel → a matching situational or cultural entrance → the common attentional exercise → motivation, action and later review. It may contrast different entrances leading into the same underlying workflow. The mockup will be under five minutes.
+
+This is a bounded simulation. It requires no live social account, API integration, published post or full social network, and makes no claim that the practice has been validated. It does not resolve the separate needs for a reviewed attention exercise, richer power and no-cooperation scenarios, or real-user testing across backgrounds.
+
+Status: requested and in preparation; the fourth video has not been delivered. The plan uses the same Claude and Codex seats, with independent QA followed by a pause. The original specification, first three videos and existing links remain unchanged; no repository changes are included.
+
+Related source project:
+https://chatgpt.com/g/g-p-6ad29bd18e148191a9d279048ee379f2/project

@@ -1,0 +1,12 @@
+Reflecting Minds App repository
+Supplied by Alan on 21 October 2026
+
+https://github.com/adampog/reflecting-minds-app
+
+This is the actual repository URL Alan supplied for this app project. It supersedes the earlier “URL pending” statements in the app repository decision note.
+
+The production framework remains undecided. The external Claude project “Reflecting Minds App Project” was reported by Alan as preparing a bare-bones placeholder repository; no independent access to that Claude project is claimed here.
+
+Read-only access check: the connected GitHub lookup returned 404 at the time of this update. Repository contents and permissions were therefore not verified. That response alone does not establish that the repository is missing. No repository edits, pushes, permission changes or framework decisions were made.
+
+Continue to use the existing version 0.1 specification and the approved low-fidelity phone mockup/video scope. The verified OpenRig video still belongs in this ChatGPT project when ready.

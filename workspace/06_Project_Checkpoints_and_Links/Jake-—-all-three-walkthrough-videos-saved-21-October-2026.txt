@@ -1,0 +1,18 @@
+Jake, all three walkthrough videos are saved in this project’s Sources. Please have a look and let me know what you think.
+
+1. Mobile phone screen workflow, about 2:35
+Reflecting_Minds_App_Mobile_Walkthrough_2026-10-21.mp4
+
+2. Desktop web-browser workflow, about 2:35
+Reflecting_Minds_App_Desktop_Walkthrough_2026-10-21.mp4
+
+3. Voice-first example conversation, about 4:28
+Reflecting_Minds_App_Voice_First_Conversation_2026-10-21.mp4
+This shows a proposed third option where you talk and listen through the workflow. Scripted spoken User/AI dialogue carries the interaction, with speech bubbles for the viewer.
+
+All three follow the same A/B/C workflows and navigation. They’re mockups for review, with example content. The voice-first video is labeled “Example conversation workflow”; a live voice engine hasn’t been implemented.
+
+To watch, go to Sources, open the video’s actions menu and choose Download. The original specification and the separate voice-first addendum are there too.
+https://chatgpt.com/g/g-p-6ad8e1ee8bec8191a8dc3dbf91475514/project?tab=sources
+
+21 October 2026

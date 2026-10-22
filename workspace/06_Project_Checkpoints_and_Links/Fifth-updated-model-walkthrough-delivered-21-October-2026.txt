@@ -1,0 +1,18 @@
+Reflecting Minds App: fifth walkthrough, Jake’s updated model
+21 October 2026, 18:45 UTC
+
+The fifth video and its review materials are now saved in Sources:
+- Reflecting_Minds_Updated_Model_Walkthrough_v1_2026-10-21.mp4 (4:41.52, silent and captioned)
+- Reflecting_Minds_Updated_Model_Changes_v1_Project_Review_2026-10-21.md
+- Reflecting_Minds_Updated_Model_Mockup_v1_Project_Review_2026-10-21.zip
+
+Use each file’s actions menu → Download. The ZIP contains a local tap-through viewer; follow its README. Only Back, Next and arrow-key navigation operate. The controls drawn inside the example screens are simulated.
+
+This version responds to Jake’s updated conceptual-model Word document and the full visible Develop App Research Model session:
+https://chatgpt.com/g/g-p-6ad8e1ee8bec8191a8dc3dbf91475514-reflecting-minds-app/shared/c/6ad8ed1f-2f1c-83ea-ba2a-50ff05789e6c
+
+It illustrates roughly nine entry experiences, possible behavioral signs of value, multilingual and multi-party perspectives, evolving hypotheses beyond Global Attentiveness, participant-proposed strategies, and tentative invitations/groups. The change brief separates Jake’s direct requests, ChatGPT recommendations, prototype assumptions and open decisions. Jake has settled that the initial beta need not be a formal research pilot.
+
+Two design tensions remain open: device-private/no-account reflection versus real group identity and sharing; and AI-later beta scope versus the earlier scripted voice demonstration. These screens do not establish a working beta, live AI/group sharing, validated practice or real social integration.
+
+The original specification and all four earlier videos remain unchanged. Independent review checked 19 frames and the viewer’s Back/Next navigation. All three new project uploads were downloaded back and matched their intended file hashes. Both app development seats are paused at this delivery checkpoint, with no remaining work assigned; the repository remains unchanged.

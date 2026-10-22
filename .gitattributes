@@ -1,0 +1,7 @@
+# Treat bundle media and office documents as binary — no diffing, no EOL conversion.
+*.mp4   binary
+*.docx  binary
+*.zip   binary
+
+# Keep the manifest diffable.
+*.csv   text eol=lf

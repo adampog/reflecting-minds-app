@@ -1,0 +1,12 @@
+App repository decision and rig checkpoint
+Recorded 21 October 2026, 16:16 UTC
+
+Alan reports that an external Claude project named “Reflecting Minds App Project” is creating a bare-bones placeholder repository. This is user-reported context; the external Claude project and repository have not been independently accessed or verified here. Alan will provide the actual URL for the project directory later. No repository URL is available yet.
+
+The production framework remains undecided. Avoid creating a competing remote repository or treating the mockup’s framework as a production commitment. Use the existing v0.1 specification as the guideline for the agreed low-fidelity mobile flows, sample questions/scenarios and under-five-minute video.
+
+Rig checkpoint update
+This paragraph supersedes the permission-blocked portion of the earlier 16:06 rig note. The existing operator resolved that read-permission gate. At 16:06:20 UTC, Claude had verified the exact specification hash, read the full specification and claimed the first work item in progress. Codex’s brief acknowledgement is recorded; its independent QA task was pending pickup at that checkpoint. No action from Alan is needed for that resolved gate. A review-ready prototype or completed video has not been verified in this checkpoint.
+
+Pending project additions
+Add the real repository URL after Alan supplies it. Add the verified OpenRig video when it is ready. Keep the existing specification, source-project links and both-seat independent review requirements intact.

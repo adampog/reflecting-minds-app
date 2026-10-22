@@ -1,0 +1,35 @@
+Reflecting Minds App — working brief and decisions
+Updated 21 October 2026, 16:04 UTC
+
+Purpose
+Use this project for the phone-app model and its review. The proposed experience connects attention, lived motivation, discernment, a chosen response and later learning. Culturally adaptable introductions should not require a shared worldview or a predetermined moral conclusion.
+
+Governing document
+Reflecting_Minds_Mobile_Software_Specification.docx, version 0.1, 21 October 2026, 15 pages. The uploaded copy is unchanged. Phone use is confirmed. Native versus mobile web, iOS versus Android, the proposed data policy and technical choices remain decisions to review. The document separates Jake’s explicit direction, Alan’s phone requirement, historical ChatGPT suggestions and proposed implementation.
+
+Current approved mockup and video request
+Create a low-fidelity phone-app mockup using this specification as the guideline, with sample questions and scenarios. Demonstrate the actual Flow A, Flow B and Flow C from section 2, plus brief navigation, in a video shorter than five minutes. Do not spend effort on polished visual assets at this stage.
+Requested OpenRig team: exactly two seats, Claude and Codex. They may divide the work flexibly and should independently critique and check each other’s work. This is a mockup and review brief; a demonstration must not claim unimplemented backend, privacy or security behavior is working.
+
+Flows to demonstrate
+A — Try an experience: enter through an appropriate story/link, choose an example or situation, try or skip an attention exercise, describe a motivation, optionally compare another, consider evidence and unknowns, choose a response/pause/exit, then review and optionally save/export/discard.
+B — Examine a disagreement: open the optional Discern worksheet for accounts, claims and sources, unknowns, affected or absent perspectives, costs of delay and possible responses. Treat interpretations of other people’s motives as interpretations.
+C — Return and learn: reopen a saved session on the same device/browser, record whether the response happened and what followed, and retain the original record separately from revisions.
+Navigation: Entry, Notice, Motivation, Compare, Discern, Respond, Review. Allow Back without data loss, optional-stage skips and safe exit. Exact flow text is on page 3 of the specification.
+
+Actual OpenRig status at this update
+Rig creation has been requested but is blocked pending Alan’s direct creation instruction, “create reflecting minds app rig.” No new rig or Claude/Codex seats have been verified, and no mockup or video has been verified. The specification has been materialized and its exact bytes verified for the local coordinator. Do not describe the rig as created until a creation receipt is available.
+When the new rig’s video is ready and verified, add it to this project as Alan requested. That insertion remains pending.
+
+How to use the specification
+Page 2: requirement provenance and confirmed versus proposed scope. Page 3: exact A/B/C flows and navigation. Pages 4–5: FR01–FR16. Pages 7–9: proposed architecture, data model and API/AI boundaries. Pages 10–11: privacy, safety, accessibility and failure behavior. Page 12: AT01–AT16 acceptance tests. Page 13: delivery sequence and unresolved decisions. Page 14: original requirement sources. Page 15: sourced mobile-product comparisons.
+
+Comparable-product context
+The specification compares How We Feel for emotion check-ins, Rosebud for adaptive journaling, Waking Up for authored contemplative practice, The Work App for structured inquiry and Plum Village for multilingual practice access. These are desk-research comparisons, not hands-on tests or evidence of this app’s efficacy or novelty. Product, store and privacy links are in the document. The combined motivation-to-response-to-review cycle and culturally authored entry experiences are hypotheses to test.
+
+Original project and source conversation
+Alan & Jake — Minds and Understanding remains the source project, with its existing history, papers and links intact:
+https://chatgpt.com/g/g-p-6ad29bd18e148191a9d279048ee379f2/project
+Jake’s app discussion:
+https://chatgpt.com/g/g-p-6ad29bd18e148191a9d279048ee379f2/shared/c/6ad567b9-652c-83ea-ae7e-c846e2b20a7c?owner_user_id=user-tRlXyigp8Fr2LH5CvKcujllA
+The papers have not been duplicated into this project. No unrelated personal, email, employment or other-project material belongs in this app space.

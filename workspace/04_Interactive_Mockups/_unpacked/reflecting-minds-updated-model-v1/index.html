@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updated model mockup v1 – tap through</title>
+<style>
+body { margin: 0; font: 16px system-ui, sans-serif; background: #ddd; }
+.bar { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 8px; background: #111; color: #fff; }
+.bar button { font: inherit; min-width: 88px; min-height: 40px; }
+iframe { display: block; margin: 0 auto; width: 1280px; height: 720px; border: 0; background: #fff; max-width: 100%; }
+</style>
+</head>
+<body>
+<div class="bar"><button id="prev">‹ Back</button><span id="n"></span><button id="next">Next ›</button><small>Only Back and Next work; buttons drawn on the screens are pictures.</small></div>
+<iframe id="f" src="frames.html" title="Mockup screen"></iframe>
+<script>
+// Tap-through viewer over the same frames the video uses. Needs a local server so fetch can read storyboard.json.
+let i = 0, frames = [];
+const f = document.getElementById('f');
+const show = () => { f.contentWindow.render(frames, i); document.getElementById('n').textContent = `${i + 1} / ${frames.length}`; };
+document.getElementById('prev').onclick = () => { if (i > 0) { i--; show(); } };
+document.getElementById('next').onclick = () => { if (i < frames.length - 1) { i++; show(); } };
+document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') document.getElementById('prev').click(); if (e.key === 'ArrowRight') document.getElementById('next').click(); });
+f.onload = () => fetch('storyboard.json').then(r => r.json()).then(d => { frames = d; show(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Updated model mockup v1 – frame</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; width: 1280px; height: 720px; font: 20px/1.35 system-ui, sans-serif; background: #fafafa; color: #111; overflow: hidden; display: flex; flex-direction: column; }
+.label { background: #b00000; color: #fff; font-weight: bold; text-align: center; padding: 8px; font-size: 18px; }
+.wrap { flex: 1; display: grid; grid-template-columns: 230px 400px 1fr; min-height: 0; }
+.side { border-right: 2px solid #111; padding: 16px; background: #eee; font-size: 16px; }
+.side h2 { font-size: 14px; text-transform: uppercase; margin: 0 0 8px; }
+.side div { padding: 6px 8px; margin: 4px 0; border: 1px solid #999; background: #fff; }
+.side .now { background: #111; color: #fff; border-color: #111; }
+.side .done { background: #ccc; }
+.stage { display: flex; align-items: center; justify-content: center; padding: 14px; }
+.phone { width: 340px; height: 580px; border: 3px solid #111; border-radius: 28px; background: #fff; padding: 14px 12px; display: flex; flex-direction: column; }
+.phone .head { font-size: 13px; font-weight: bold; border-bottom: 1px solid #999; padding: 2px 4px 6px; margin-bottom: 8px; color: #444; }
+.phone .head:empty { display: none; }
+.rows { flex: 1; font-size: 16px; overflow: hidden; }
+.rows p { margin: 0 0 7px; padding: 5px 8px; border: 1px dashed #999; }
+.btns { display: flex; flex-direction: column; gap: 6px; }
+.btns span { border: 2px solid #111; text-align: center; padding: 6px; font-size: 15px; }
+.btns span:first-child { background: #111; color: #fff; }
+.cap { padding: 28px 32px; display: flex; flex-direction: column; justify-content: center; border-left: 2px solid #111; }
+.cap .part { font-size: 16px; text-transform: uppercase; color: #b00000; font-weight: bold; }
+.cap h1 { font-size: 30px; margin: 6px 0 10px; }
+.cap .basis { font-size: 16px; border: 2px solid #111; padding: 6px 10px; margin-bottom: 16px; background: #fff7c2; }
+.cap p { font-size: 24px; line-height: 1.38; margin: 0; }
+</style>
+</head>
+<body>
+<div class="label">UPDATED MODEL MOCKUP v1 · proposals for review · fictional data · no working beta, AI, groups or sharing</div>
+<div class="wrap">
+  <div class="side"><h2>Journey</h2><div id="parts"></div></div>
+  <div class="stage"><div class="phone"><div class="head" id="head"></div><div class="rows" id="rows"></div><div class="btns" id="btns"></div></div></div>
+  <div class="cap"><div class="part" id="part"></div><h1 id="title"></h1><div class="basis" id="basis"></div><p id="caption"></p></div>
+</div>
+<script>
+// Frame renderer only: build.js calls render(frames, i) and screenshots one image per storyboard frame.
+const PARTS = ['Intro', 'Discovery', 'Core journey', 'Value signals', 'Strategies', 'Many voices', 'Groups (proposed)', 'Open tensions', 'Outro'];
+const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
+function render(frames, i) {
+  const f = frames[i];
+  const last = p => Math.max(...frames.map((x, k) => x.part === p ? k : -1));
+  document.getElementById('parts').innerHTML = PARTS.map(p =>
+    `<div class="${p === f.part ? 'now' : last(p) < i ? 'done' : ''}">${esc(p)}</div>`).join('');
+  document.getElementById('head').textContent = f.screen.head;
+  document.getElementById('rows').innerHTML = f.screen.rows.map(r => `<p>${esc(r)}</p>`).join('');
+  document.getElementById('btns').innerHTML = f.screen.buttons.map(b => `<span>${esc(b)}</span>`).join('');
+  document.getElementById('part').textContent = f.part;
+  document.getElementById('title').textContent = f.title;
+  document.getElementById('basis').textContent = 'Basis: ' + f.basis;
+  document.getElementById('caption').textContent = f.caption;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+Current OpenRig status — 21 October 2026, 16:06 UTC
+
+This update supersedes the “Actual OpenRig status” section in the 16:04 UTC app brief. Rig creation is now confirmed; the earlier pending-creation statement is no longer current. The rest of the app brief and specification remain unchanged.
+
+Reflecting Minds App rig was created at 16:03 UTC on 21 October 2026. Rig ID: 01M5FK5RNCFB3PQK3GDR5K7ZG7.
+
+Exactly two seats are live:
+- app-claude@reflecting-minds-app — Claude Code, Opus
+- app-codex@reflecting-minds-app — Codex, GPT-6.1 Sol, medium reasoning
+
+The exact version 0.1 specification is bound to both seats. Codex has acknowledged the brief. Claude is awaiting permission to read the guidance/specification directory, and the operator is aware. Their joint agreement on the work is still pending. No app edits or video renders have been verified at this update.
+
+The brief remains a low-fidelity mobile mockup with sample questions/scenarios, demonstrating the actual Flow A, Flow B and Flow C plus brief navigation in a video under five minutes. Division of work is flexible; independent critique and checks are required. No visual-asset polish is requested.
+
+Next milestones to verify: resolve the remaining read permission; receive the joint plan; create and independently check the mockup; render and inspect the video; add the verified video to this ChatGPT project as Alan requested. Video insertion is pending, not completed.
