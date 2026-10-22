@@ -1,0 +1,479 @@
+<title>Reflecting Minds</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<style>
+/* Layout: single measured column; status rail up top, then model, then the decision registers. */
+:root {
+  --bg:        #F6F7F5;
+  --surface:   #FFFFFF;
+  --surface-2: #EEF0ED;
+  --fg:        #1A1D21;
+  --muted:     #5B636B;
+  --line:      #DEE1DC;
+  --accent:    #35596B;
+  --open:      #7E5B10;
+  --blocked:   #8A392D;
+  --ok:        #3A6546;
+
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body:    "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #15171A;
+    --surface:   #1D2025;
+    --surface-2: #24282E;
+    --fg:        #E9E7E4;
+    --muted:     #9AA0A7;
+    --line:      #2C3137;
+    --accent:    #86AABD;
+    --open:      #D3A747;
+    --blocked:   #D28878;
+    --ok:        #81B18D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:        #15171A;
+  --surface:   #1D2025;
+  --surface-2: #24282E;
+  --fg:        #E9E7E4;
+  --muted:     #9AA0A7;
+  --line:      #2C3137;
+  --accent:    #86AABD;
+  --open:      #D3A747;
+  --blocked:   #D28878;
+  --ok:        #81B18D;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 3rem 5rem;
+}
+
+/* ---- masthead ---- */
+.masthead { border-bottom: 2px solid var(--fg); padding-bottom: 1.25rem; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .75rem;
+}
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+.standfirst {
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  font-style: italic;
+  color: var(--muted);
+  margin: .9rem 0 0;
+  max-width: 40ch;
+}
+
+/* ---- status banner ---- */
+.banner {
+  margin-top: 2rem;
+  border: 1px solid var(--blocked);
+  border-left: 4px solid var(--blocked);
+  background: var(--surface);
+  padding: 1.1rem 1.25rem;
+  border-radius: 3px;
+}
+.banner .label {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blocked);
+  display: block;
+  margin-bottom: .4rem;
+}
+.banner p { margin: 0; font-size: .95rem; }
+.banner p + p { margin-top: .6rem; }
+
+/* ---- status grid ---- */
+.status {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 2rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.status div { background: var(--surface); padding: .9rem 1rem; }
+.status dt {
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .3rem;
+}
+.status dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: .95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- sections ---- */
+section { margin-top: 3.5rem; }
+h2 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  margin: 0 0 .35rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--line);
+}
+.sectnote { color: var(--muted); font-size: .92rem; margin: .6rem 0 1.5rem; max-width: 62ch; }
+h3 {
+  font-family: var(--body);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2rem 0 .8rem;
+}
+p { max-width: 68ch; }
+
+/* ---- the seven stages: a real sequence, so numbered ---- */
+.stages { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.stages li {
+  counter-increment: s;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: .9rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.stages li::before {
+  content: counter(s, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: .75rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.stages .nm { font-family: var(--display); font-size: 1.15rem; font-weight: 600; }
+.stages .ds { color: var(--muted); font-size: .9rem; display: block; margin-top: .1rem; }
+
+.freedom {
+  margin-top: 1.25rem;
+  background: var(--surface-2);
+  border-radius: 3px;
+  padding: 1rem 1.15rem;
+  font-size: .92rem;
+}
+.freedom strong { font-weight: 600; }
+
+/* ---- flows ---- */
+.flows { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.flow {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 1.1rem;
+  min-width: 0;
+}
+.flow .ltr {
+  font-family: var(--display);
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 600;
+}
+.flow h4 { font-family: var(--display); font-size: 1.1rem; margin: .4rem 0 .4rem; font-weight: 600; }
+.flow p { font-size: .88rem; color: var(--muted); margin: 0; }
+
+/* ---- exclusions ---- */
+.excl { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.excl li {
+  font-family: var(--mono);
+  font-size: .76rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  padding: .3rem .6rem;
+  border-radius: 2px;
+  text-decoration: line-through;
+  text-decoration-color: var(--blocked);
+  text-decoration-thickness: 1px;
+}
+
+/* ---- tables ---- */
+.tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { text-align: left; padding: .65rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th {
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: 0; }
+td.n { font-family: var(--mono); color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.pill {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .18rem .45rem;
+  border-radius: 2px;
+  white-space: nowrap;
+  border: 1px solid currentColor;
+}
+.pill.open { color: var(--open); }
+.pill.none { color: var(--blocked); }
+.pill.ok   { color: var(--ok); }
+
+/* ---- owners ---- */
+.owners { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.owner { background: var(--surface); padding: 1rem 1.15rem; display: grid; grid-template-columns: 1fr auto; gap: .5rem 1rem; align-items: start; }
+.owner .fn { font-family: var(--display); font-size: 1.1rem; font-weight: 600; }
+.owner .rq { grid-column: 1 / -1; font-size: .86rem; color: var(--muted); margin: 0; }
+
+/* ---- docs ---- */
+.hash { font-family: var(--mono); font-size: .7rem; color: var(--muted); word-break: break-all; }
+
+.foot {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: .85rem;
+  color: var(--muted);
+}
+.foot p { max-width: 70ch; }
+.foot code { font-family: var(--mono); font-size: .8rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:focus-visible, li:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Project hub · 22 October 2026</p>
+    <h1>Reflecting Minds</h1>
+    <p class="standfirst">A mobile-first progressive web app for structured personal reflection.</p>
+  </header>
+
+  <div class="banner">
+    <span class="label">Status — planning and review</span>
+    <p><strong>No implementation is authorized.</strong> The v0.2 PWA plan states that it "does not authorize implementation, select a production framework, or claim the beta is ready." No phase begins because it appears on this page.</p>
+    <p>Nothing here records an approval. Walkthrough videos are demonstrations, not working software, and the mockups are disposable demonstrators rather than architecture.</p>
+  </div>
+
+  <dl class="status">
+    <div><dt>Governing spec</dt><dd>v0.2 · 21 Oct 2026</dd></div>
+    <div><dt>Current phase</dt><dd>0 — Agree scope</dd></div>
+    <div><dt>Framework</dt><dd>Not selected</dd></div>
+    <div><dt>Accountable owners</dt><dd>0 of 4 named</dd></div>
+    <div><dt>Open decisions</dt><dd>8</dd></div>
+    <div><dt>Bundle integrity</dt><dd>29/29 verified</dd></div>
+  </dl>
+
+  <section>
+    <h2>The model</h2>
+    <p class="sectnote">Seven flexible stages. The sequence is the product, but the user is never held to it.</p>
+    <ol class="stages">
+      <li><span><span class="nm">Entry</span><span class="ds">Arrive through one of roughly nine doors — a story, a link, a situation. Doors describe content; they never label people.</span></span></li>
+      <li><span><span class="nm">Notice</span><span class="ds">An optional attention practice. Skippable without penalty.</span></span></li>
+      <li><span><span class="nm">Motivation</span><span class="ds">Describe what is actually moving you, in your own words.</span></span></li>
+      <li><span><span class="nm">Compare</span><span class="ds">Optionally hold a second motivation alongside the first. No ranking. The first answer is preserved.</span></span></li>
+      <li><span><span class="nm">Discern</span><span class="ds">Accounts, claims, sources, unknowns, absent perspectives, costs of delay. Interpretations of other people's motives stay labelled as interpretations.</span></span></li>
+      <li><span><span class="nm">Respond</span><span class="ds">Choose an action, an inquiry, a pause, or an exit. Nothing is sent anywhere.</span></span></li>
+      <li><span><span class="nm">Review</span><span class="ds">Return later and record what actually happened. The original plan is kept separate from revisions.</span></span></li>
+    </ol>
+    <p class="freedom"><strong>At every stage</strong> the user may move back, skip optional work, pause, disagree, decline to act, or leave. Mixed, absent, uncertain and "no difference" are valid answers. A neutral route stays usable throughout, and no branch treats refusal as bad faith.</p>
+  </section>
+
+  <section>
+    <h2>Three core flows</h2>
+    <div class="flows">
+      <div class="flow">
+        <span class="ltr">A</span>
+        <h4>Try an experience</h4>
+        <p>Enter, choose a situation, try or skip the attention exercise, describe a motivation, weigh evidence and unknowns, choose a response, then review and optionally save.</p>
+      </div>
+      <div class="flow">
+        <span class="ltr">B</span>
+        <h4>Examine a disagreement</h4>
+        <p>Open the optional Discern worksheet for accounts, claims and sources, unknowns, affected or absent perspectives, costs of delay and possible responses.</p>
+      </div>
+      <div class="flow">
+        <span class="ltr">C</span>
+        <h4>Return and learn</h4>
+        <p>Reopen a saved session on the same device, record whether the response happened and what followed. The original record survives alongside revisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy posture</h2>
+    <p>Unsaved drafts live in memory only — not in localStorage, sessionStorage, IndexedDB, caches, URLs or telemetry. Durable saving requires a deliberate, plainly-named <em>Save on this device</em> action, written transactionally so a failed write leaves the draft intact and says so.</p>
+    <p>Export is field-selectable with a preview in both text and JSON; deletion is scoped and confirmed, covering linked outcomes and revisions across every journal store. Reflection text is never transmitted — not to servers, not to analytics, not to AI.</p>
+    <p class="freedom">The plan is careful about one thing worth repeating: for a hosted app, "nothing leaves the device" must not be claimed merely because journal text stays local. Hosting and CDN logs still see IP addresses, paths and referrers.</p>
+
+    <h3>Excluded from beta</h3>
+    <ul class="excl">
+      <li>live AI</li><li>generated summaries</li><li>classifications</li><li>voice AI</li>
+      <li>groups</li><li>shared journals</li><li>public sharing</li><li>user invitations</li>
+      <li>research enrollment</li><li>ratings</li><li>satisfaction surveys</li><li>learning prompts</li>
+    </ul>
+    <p class="sectnote" style="margin-top:1rem">No claims may be made about proven improvements in Global Attentiveness, empathy, agreement, wise action or conflict resolution.</p>
+  </section>
+
+  <section>
+    <h2>Accountable owners</h2>
+    <p class="sectnote">Four functions must have named people before release. <strong>None is assigned.</strong> This is the blocking item for Phase 0.</p>
+    <div class="owners">
+      <div class="owner">
+        <span class="fn">Product</span><span class="pill none">unassigned</span>
+        <p class="rq">Requirements, open choices, beta invitation policy, supported devices, launch approval.</p>
+      </div>
+      <div class="owner">
+        <span class="fn">Engineering</span><span class="pill none">unassigned</span>
+        <p class="rq">Storage and network boundaries, accessibility implementation, tests, migration and update reliability, rollback.</p>
+      </div>
+      <div class="owner">
+        <span class="fn">Content</span><span class="pill none">unassigned</span>
+        <p class="rq">Authored scenarios and practices, independent review, locale assets, corrections, content retirement.</p>
+      </div>
+      <div class="owner">
+        <span class="fn">Privacy &amp; operations</span><span class="pill none">unassigned</span>
+        <p class="rq">Hosting and log review, approved telemetry and report handling, retention, incident response, deletion scope.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open decisions</h2>
+    <p class="sectnote">All eight from specification §9. None selected. The next review should resolve only what a separately authorized thin build actually needs.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Decision</th><th>Decides</th><th>State</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Initial scenario subset and nine-door production schedule</td><td>Product · Content</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">2</td><td>Whether beta participants may invite others; manual vs product invitations</td><td>Product</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">3</td><td>Phone and browser matrix; offline, media caching, bandwidth and data costs</td><td>Product · Engineering</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">4</td><td>Storage technology, eviction and deletion verification</td><td>Engineering · Privacy</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">5</td><td>Exact essential telemetry events and retention</td><td>Privacy · Operations</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">6</td><td>Content-report path, and who reviews and responds</td><td>Product · Content · Privacy</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">7</td><td>Whether any external beta learning is appropriate</td><td>Product · Privacy</td><td><span class="pill open">open</span></td></tr>
+          <tr><td class="n">8</td><td>Future voice-first, AI, groups, multilingual shared inquiry, research contribution</td><td>Separate scope review</td><td><span class="pill open">open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sectnote" style="margin-top:1rem">Storage note: IndexedDB is a candidate for transactional records and linked outcomes; localStorage is simpler but synchronous. Corruption recovery, quota handling, schema migration and rollback must be defined <em>before</em> a technology is chosen.</p>
+  </section>
+
+  <section>
+    <h2>Phase gates</h2>
+    <p class="sectnote">Each gate needs recorded evidence and a named reviewer. A failing gate blocks invited-beta release.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Phase</th><th>Deliverable</th><th>Gate</th></tr></thead>
+        <tbody>
+          <tr><td class="n">0</td><td>Agree scope — requirements, owners, scenario subset, device matrix</td><td>Product, privacy and content review</td></tr>
+          <tr><td class="n">1</td><td>Thin shell — entry resolution, seven stages, memory drafts, routes, Exit</td><td>AT01–04, 06–09, 13, 16, 17 on supported phones</td></tr>
+          <tr><td class="n">2</td><td>Reviewed content — versioned packs, deterministic branches, alternatives</td><td>AT02, 06–08, 14–15, 17; publication negative tests fail closed</td></tr>
+          <tr><td class="n">3</td><td>Local records — save and resume, revisions, export, confirmed deletion</td><td>AT10–11 across approved browsers; no false-success writes or deletes</td></tr>
+          <tr><td class="n">4</td><td>Offline and operations — cache and media policy, install and update, minimal logs</td><td>AT05, 12, 15; network and host-log canaries; rollback checks</td></tr>
+          <tr><td class="n">5</td><td>Invited beta gate — full AT01–17 report, incident and rollback owners</td><td>All required tests pass; release explicitly approved</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sectnote" style="margin-top:1rem">The mockup's sixteen passing local checks and its 183.28-second video do not satisfy these gates. Representative devices, assistive technology, real downloads, browser restart and eviction, all-store deletion, hosting-log inspection and publication rejection tests all still need implementation-stage evidence.</p>
+  </section>
+
+  <section>
+    <h2>Documents</h2>
+    <p class="sectnote">Held in the repository under <code>workspace/</code>, preserved as provided.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Document</th><th>State</th><th>SHA-256</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Mobile Software Specification <strong>v0.2</strong><br><span class="hash">21 Oct 2026</span></td>
+            <td><span class="pill ok">governing</span></td>
+            <td class="hash">fba4cd12044956341bafa743a9c20e45da7863c91dffafae80813272557ecfa5</td>
+          </tr>
+          <tr>
+            <td>Mobile Software Specification v0.1<br><span class="hash">21 Oct 2026 · 15pp</span></td>
+            <td><span class="pill">superseded</span></td>
+            <td class="hash">a07e664f6e81dce41ca28d0839cbbc857ecc9fff625bda9ee85a3178bb6ea0ff</td>
+          </tr>
+          <tr>
+            <td>v0.2 PWA Implementation Plan<br><span class="hash">Phases, gates, evidence checklist</span></td>
+            <td><span class="pill ok">current plan</span></td>
+            <td class="hash">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sectnote" style="margin-top:1rem">The v0.2 hash above matches the governing hash cited inside the PWA plan — the plan and the specification held here are the same pair that were reviewed together. The working brief of 21 Oct 16:04 UTC names v0.1 as governing; that brief predates v0.2.</p>
+  </section>
+
+  <section>
+    <h2>Walkthroughs</h2>
+    <p class="sectnote">Six demonstrations. Voice-first is scripted, social entry is simulated, updated-model group screens are proposals. None demonstrates working backend, privacy or security behavior.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Walkthrough</th><th>Duration</th><th>Resolution</th><th>Audio</th></tr></thead>
+        <tbody>
+          <tr><td>Mobile</td><td class="num">154.80s</td><td class="num">390×880</td><td class="num">—</td></tr>
+          <tr><td>Desktop</td><td class="num">154.88s</td><td class="num">1280×836</td><td class="num">—</td></tr>
+          <tr><td>v0.2 mockup <span class="pill ok">accepted</span></td><td class="num">183.28s</td><td class="num">390×844</td><td class="num">—</td></tr>
+          <tr><td>Voice-first conversation</td><td class="num">268.02s</td><td class="num">1280×720</td><td class="num">AAC</td></tr>
+          <tr><td>Updated model v1</td><td class="num">281.52s</td><td class="num">1280×720</td><td class="num">—</td></tr>
+          <tr><td>Social entry</td><td class="num">286.48s</td><td class="num">1280×720</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <h3 style="margin-top:0">Provenance and gaps</h3>
+    <p>Material originated in a ChatGPT project workspace and was assembled into <code>Reflecting_Minds_COMPLETE_PROJECT_BUNDLE_2026-10-22.zip</code> on 22 October 2026 — 32 files, 19&nbsp;MB. Twenty-nine files carried checksums; all twenty-nine verified, with no mismatches and none missing, re-verified after import into the repository.</p>
+    <p><strong>Not included:</strong> full verbatim ChatGPT transcripts, which were unavailable through the source workspace; the original <em>Minds and Understanding</em> papers, not duplicated. The source workspace received a 404 for the repository and could not verify it — expected, since the repository is private.</p>
+    <p><strong>Unconfirmed:</strong> as of the 21 Oct 16:06 UTC checkpoint, OpenRig creation was requested but blocked pending a direct creation instruction. No rig or seats have been verified, and the rig should not be described as created until a creation receipt exists.</p>
+  </footer>
+
+</div>
