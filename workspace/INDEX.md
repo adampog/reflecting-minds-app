@@ -122,7 +122,13 @@ and social-entry addenda.
 
 ### `06_Project_Checkpoints_and_Links/`
 Dated checkpoints, delivery notes, the working brief, and the repository URL. Some are
-superseded — check dates against v0.2. Includes the OpenRig status note of 21 Oct 16:06 UTC.
+superseded — check dates against v0.2.
+
+**Read these in date order.** The 16:04 UTC brief says OpenRig creation was blocked pending an
+instruction; the 16:06 UTC checkpoint supersedes that and confirms the rig was created at 16:03
+UTC, rig ID `01M5FK5RNCFB3PQK3GDR5K7ZG7`, with seats `app-claude` (Claude Code, Opus) and
+`app-codex` (Codex, GPT-6.1 Sol). The 16:16 UTC checkpoint supersedes the permission-blocked
+part of the 16:06 note. Quoting the brief's status without the later checkpoints gets it wrong.
 
 ---
 
