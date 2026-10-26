@@ -1,0 +1,192 @@
+{
+  "checks": [
+    {
+      "name": "nine unique list doors",
+      "pass": true,
+      "detail": [
+        "personal-tension",
+        "seeing-differently",
+        "uncertainty",
+        "divided-group",
+        "another-perspective",
+        "seen-or-heard",
+        "values-tension",
+        "self-understanding",
+        "just-curious"
+      ]
+    },
+    {
+      "name": "list opens personal-tension",
+      "pass": true
+    },
+    {
+      "name": "list opens seeing-differently",
+      "pass": true
+    },
+    {
+      "name": "list opens uncertainty",
+      "pass": true
+    },
+    {
+      "name": "list opens divided-group",
+      "pass": true
+    },
+    {
+      "name": "list opens another-perspective",
+      "pass": true
+    },
+    {
+      "name": "list opens seen-or-heard",
+      "pass": true
+    },
+    {
+      "name": "list opens values-tension",
+      "pass": true
+    },
+    {
+      "name": "list opens self-understanding",
+      "pass": true
+    },
+    {
+      "name": "list opens just-curious",
+      "pass": true
+    },
+    {
+      "name": "deck neutral introduction parity",
+      "pass": false
+    },
+    {
+      "name": "nine reel cards with buttons",
+      "pass": true,
+      "detail": [
+        "Unresolved personal tension",
+        "Seeing things differently",
+        "Uncertainty",
+        "Divided group",
+        "Another person’s perspective",
+        "Something seen or heard",
+        "Values in tension",
+        "Self-understanding",
+        "Just curious"
+      ]
+    },
+    {
+      "name": "actual recorded mouse swipe changes card",
+      "pass": false,
+      "detail": {
+        "before": "Unresolved personal tension",
+        "after": "Unresolved personal tension"
+      }
+    },
+    {
+      "name": "pointer handler changes card",
+      "pass": true
+    },
+    {
+      "name": "text only removes entry artwork",
+      "pass": false,
+      "detail": {
+        "images": 1
+      }
+    },
+    {
+      "name": "privacy before fictional route",
+      "pass": true
+    },
+    {
+      "name": "privacy labels at least 12px",
+      "pass": true
+    },
+    {
+      "name": "privacy diagram mock qualification",
+      "pass": true
+    },
+    {
+      "name": "text only removes scene artwork",
+      "pass": false,
+      "detail": {
+        "images": 1
+      }
+    },
+    {
+      "name": "notice body in room palette",
+      "pass": true
+    },
+    {
+      "name": "no durable save before explicit action",
+      "pass": true
+    },
+    {
+      "name": "review preserves own words",
+      "pass": true
+    },
+    {
+      "name": "unknown safe fallback",
+      "pass": true
+    },
+    {
+      "name": "retired safe fallback",
+      "pass": true
+    },
+    {
+      "name": "stage jump cannot bypass privacy",
+      "pass": true
+    },
+    {
+      "name": "reduced motion has no active animation",
+      "pass": true
+    },
+    {
+      "name": "entry layouts no horizontal overflow",
+      "pass": true,
+      "detail": [
+        {
+          "width": 320,
+          "screen": "arrival",
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "screen": "list",
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "screen": "deck",
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "screen": "arrival",
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "screen": "list",
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "screen": "deck",
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "scrolled mock banner and Exit visible",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "no external requests",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": []
+}

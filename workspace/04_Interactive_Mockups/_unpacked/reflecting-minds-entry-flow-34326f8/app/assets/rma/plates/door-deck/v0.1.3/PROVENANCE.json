@@ -1,0 +1,58 @@
+{
+  "asset_set": "RMA entry door deck",
+  "version": "v0.1.3",
+  "status": "review_candidate",
+  "channel": "Reflecting Minds AI",
+  "direction": "A — Layered paper, selected by Alan for this task",
+  "authority": {
+    "source_brief": "deliveries/rma-entry-directions/ART-DIRECTOR-RMA-ENTRY-DIRECTIONS-BRIEF-20261023.md",
+    "source_brief_sha256": "c047a1ca0e153324747f83c3bd1efda2f9154c49ad258d8fc0935a529d9f7ed4",
+    "repair_review": "deliveries/rma-entry-directions/ART-DIRECTOR-RMA-DECK-V012-REVIEW-20261023.md",
+    "repair_review_sha256": "c4fc6d57d6bad244c246ea31acfb5b44c49649609e1f4845bb3437888a8358af",
+    "repair_queue_item": "qitem-20261023183121-079391ddb60866e9"
+  },
+  "input_package": {
+    "version": "v0.1.2",
+    "manifest": "yt-art-library/rma/plates/door-deck/v0.1.2/MANIFEST.sha256",
+    "manifest_sha256": "0b485a1e30c44bb3c2470c5dc985ef1a2ed8abbfe789ac1f508cbca15c737cac"
+  },
+  "repair": {
+    "from_version": "v0.1.2 (preserved)",
+    "target_plates": [
+      "just-curious",
+      "seen-or-heard",
+      "personal-tension",
+      "values-tension",
+      "self-understanding"
+    ],
+    "changes": {
+      "just-curious": "Added wall panel seams and a second shelf line behind the bowls.",
+      "seen-or-heard": "Added awning stripes, crates and packed-earth detail around the stalls.",
+      "personal-tension": "Added orchard tree masses and fence rails.",
+      "values-tension": "Added balanced furrow strips to both sides of the fork.",
+      "self-understanding": "Added stone joints to the well and path edges."
+    },
+    "river_plates": "seeing-differently (P2) and divided-group are byte-identical to v0.1.2; neither was reduced.",
+    "image_generation_calls": 0,
+    "external_assets": 0
+  },
+  "parity": {
+    "source": "PARITY.json",
+    "original_metrics_tolerance_fraction": 0.12,
+    "colorfulness_hasler_susstrunk_tolerance_fraction": 0.15,
+    "l1_edge_density_at_120x80_gt12_tolerance_fraction": 0.20,
+    "thumbnail_metric": "Lanczos grayscale 1200x800 to 120x80; forward differences at the 119x79 interior; count pixels where |dx| + |dy| > 12.",
+    "result": "PASS",
+    "worst_relative_delta": 0.18906,
+    "worst_plate": "self-understanding",
+    "worst_metric": "l1_edge_density_at_120x80_gt12"
+  },
+  "source_style": {
+    "palette_and_pattern": "shared A palette and paper-fiber pattern",
+    "construction": "editable hand-built SVG"
+  },
+  "review_scope": "Nine still plates, separate alt text, two comparison sheets and parity evidence only. No app integration, production-use approval, publication approval or upload approval.",
+  "builder": "art.builder",
+  "independent_review": "pending art.producer",
+  "uploads": "HOLD"
+}

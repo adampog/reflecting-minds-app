@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="300" viewBox="0 0 390 300" role="img" aria-labelledby="title desc">
+  <title id="title">An open, warm threshold</title>
+  <desc id="desc">A quiet open doorway joins a soft terracotta entry space to a pale sage room, with a clear path and no people.</desc>
+  <defs>
+    <pattern id="fiber" width="32" height="28" patternUnits="userSpaceOnUse"><path d="M4 7h8m11 8h5M9 23h4" stroke="#704F3B" stroke-width=".7" opacity=".16"/></pattern>
+    <filter id="shadow" x="-.2" y="-.2" width="1.5" height="1.5"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="4" dy="5"/><feComponentTransfer><feFuncA type="linear" slope=".19"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="390" height="300" fill="#F1C98E"/>
+  <path d="M0 0h390v186H0z" fill="#E7A268"/>
+  <path d="M0 182q96-14 190 1t200-2v119H0z" fill="#D68052"/>
+  <path d="M0 195q94-15 192 0t198-1" fill="none" stroke="#8B553A" stroke-width="2" opacity=".45"/>
+  <g filter="url(#shadow)">
+    <path d="M91 244V49q0-10 10-10h187q10 0 10 10v195h-24V63H115v181z" fill="#8B553A"/>
+    <path d="M125 223V68h147v155z" fill="#F7E2C7"/>
+    <path d="M137 209V80h125v129z" fill="#91AD7E"/>
+    <path d="M137 179q31-18 62-1t63-1v32H137z" fill="#72B4B2" opacity=".9"/>
+    <path d="M137 155q34-19 64 0t61 0v24q-31 18-63 0t-62 1z" fill="#A9BC91"/>
+    <path d="M105 49h187" stroke="#704331" stroke-width="5"/>
+  </g>
+  <path d="M171 299l20-75h17l29 75z" fill="#F7E2C7" opacity=".78"/>
+  <path d="M183 298l12-55m25 55-16-55" stroke="#E7A268" stroke-width="2" opacity=".48"/>
+  <path d="M27 262q22-5 44 0m248-6q20-4 40 0M39 278q16-4 32 0m260-2q14-3 28 0" fill="none" stroke="#704F3B" stroke-width="1.5" opacity=".27"/>
+  <rect width="390" height="300" fill="url(#fiber)" opacity=".45"/>
+</svg>

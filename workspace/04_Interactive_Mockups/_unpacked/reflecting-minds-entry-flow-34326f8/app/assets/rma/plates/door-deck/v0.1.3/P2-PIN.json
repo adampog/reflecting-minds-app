@@ -1,0 +1,23 @@
+{
+  "door_id": "seeing-differently",
+  "status": "content_pass_pinned_at_deck_freeze",
+  "reviewer": "art.producer (ArtDirector/Lead)",
+  "decision_source": "deliveries/rma-entry-directions/ART-DIRECTOR-RMA-I1-P2-RECHECK-20261023.md",
+  "decision": "P2: PASS on content; pinned when the deck freezes.",
+  "source": {
+    "svg": "yt-art-library/rma/explorations/entry-directions/v0.2.1/A/plate-seeing-differently.svg",
+    "svg_sha256": "a64adc79b374bac5b737903cbc6f1f85ed3b8a5518faa7092cff18ddd69c9d6c",
+    "alt_text": "yt-art-library/rma/explorations/entry-directions/v0.2.1/A/alt.txt",
+    "alt_text_sha256": "ca9a4a01980808687e69279de5e23ca8de78f02f1e465ec1a3a1cd2a43376d2e"
+  },
+  "frozen_outputs": {
+    "svg": "seeing-differently.svg",
+    "svg_sha256": "7cc4cc4f115c11fc736be12d27c3e2249e2dffca33eae41ce046c0eb18cedbe2",
+    "png_1200x800": "seeing-differently-1200x800.png",
+    "png_1200x800_sha256": "1ad0c0d8301e711eb54477c456ed9f518d30b4060931a9bddc95ca4ea09bd8e9",
+    "png_300x200": "seeing-differently-300x200.png",
+    "png_300x200_sha256": "d8372a0e32c4a56d0e399d1c937c4cde80a1861f400f9633a411c664edd3cd79"
+  },
+  "content_check": "Two equal wooden stakes; back stake on the continuous old spring-flood drift trace; front stake at the summer waterline; no verdict or outcome cue.",
+  "approval_limit": "Content review only; not Alan approval for production use or publication."
+}

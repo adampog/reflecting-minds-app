@@ -1,0 +1,13 @@
+{
+  "asset_id": "rma-proposed-privacy-boundary",
+  "version": "0.1.1",
+  "status": "review_candidate",
+  "creator": "art.builder@shared-art-assets",
+  "supersedes_for_review": "yt-art-library/rma/diagrams/privacy-boundary/v0.1.0/",
+  "source": "bounded repair from Art Director review ART-DIRECTOR-RMA-BATCH2-REVIEW-20261023.md, SHA256 954718aabfa34a7769db7cbf06d9f0ac220eaf3a0d23f5d48350562a0d9a04f7",
+  "external_assets": [],
+  "font": "system-ui stack in HTML demo",
+  "image_generation_calls": 0,
+  "security_claim": false,
+  "production_use_approved": false
+}

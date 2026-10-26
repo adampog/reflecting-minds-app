@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposed privacy boundary — mock</title>
+<style>
+  body { margin: 0; color: #2C3533; background: #EEF0EA; font: 16px/1.45 system-ui, sans-serif; }
+  figure { width: min(340px, 100%); margin: 0; }
+  .diagram { position: relative; width: 100%; aspect-ratio: 17 / 8; }
+  .diagram img { display: block; width: 100%; height: 100%; }
+  .external-label { position: absolute; left: 63%; width: 21%; text-align: left; color: #4D5A57; font: 9px/1.1 system-ui, sans-serif; }
+  .server { top: 22%; } .analytics { top: 47%; } .ai { top: 72%; }
+  figcaption { padding: 8px 10px; color: #2C3533; background: #F8F8F4; border: 1px solid #586A6B; border-top: 0; }
+  .mock-label { display: block; font-size: 12px; font-weight: 600; }
+  .proposal-caption { display: block; }
+</style>
+<figure>
+  <div class="diagram">
+    <img src="privacy-boundary.svg" width="340" height="160" alt="Three answer cards are shown inside a proposed on-device boundary. Separate, unconnected placeholders sit outside it.">
+    <span class="external-label server" aria-label="Server: not part of this proposal">Server</span>
+    <span class="external-label analytics" aria-label="Analytics: not part of this proposal">Analytics</span>
+    <span class="external-label ai" aria-label="AI service: not part of this proposal">AI service</span>
+  </div>
+  <figcaption><span class="mock-label">Illustrative mock — not a verified security statement.</span><span class="proposal-caption">Proposed beta: answers stay on this device. No server, analytics, or AI service is included in this proposal.</span></figcaption>
+</figure>
+</html>
