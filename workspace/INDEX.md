@@ -30,16 +30,25 @@ contains no production code. The source documents are explicit on this point:
 | Document | Status | Location |
 |---|---|---|
 | Mobile Software Specification **v0.2** (21 Oct 2026) | **GOVERNING** — supersedes v0.1 | `01_Software_Specifications/NEWReflecting_Minds_Mobile_Software_Specification_v0.2_2026-10-21.docx` |
-| Mobile Software Specification **v0.3 DRAFT** (23 Oct 2026) | **Draft, unreviewed. Governs nothing.** | `01_Software_Specifications/Reflecting_Minds_Mobile_Software_Specification_v0.3_DRAFT_2026-10-23.docx` |
+| Mobile Software Specification **v0.4 DRAFT** (26 Oct 2026) | **Current draft, unreviewed. Governs nothing.** Supersedes v0.3 | `01_Software_Specifications/Reflecting_Minds_Mobile_Software_Specification_v0.4_DRAFT_2026-10-26.docx` |
+| Mobile Software Specification v0.3 DRAFT (23 Oct 2026) | Superseded by v0.4; retained | `01_Software_Specifications/Reflecting_Minds_Mobile_Software_Specification_v0.3_DRAFT_2026-10-23.docx` |
 | Mobile Software Specification v0.1 (21 Oct 2026, 15pp) | Superseded; retained for provenance | `01_Software_Specifications/Reflecting_Minds_Mobile_Software_Specification.docx` |
 | v0.2 PWA Implementation Plan | Current starting plan | `05_Implementation_and_Review_Notes/Reflecting_Minds_v02_PWA_Implementation_Plan.md` |
 
+**v0.4 DRAFT SHA256:** `994262ee77134c15b9c7455a458ccd1e3f345fc96bc508b73d0d67aded4cee7e`
 **v0.3 DRAFT SHA256:** `b559b1450319e3c6e4c2e029d88ebec0f859db4ab955f4d5f24e3a6dc00e6903`
 
-> v0.3 was drafted by Claude from the v0.2 review and has had **no review**. FR14 requires a
-> reviewer distinct from the author. It takes no new product decisions and resolves no open
-> item; it adds FR17–FR19 requiring that three open matters be decided and recorded before
-> their gates. **v0.2 remains governing until v0.3 is reviewed and adopted.**
+> Both drafts are Claude-authored and have had **no review**; FR14 requires a reviewer distinct
+> from the author. v0.3 added FR17–FR19 and resolved nothing. v0.4 records the first
+> decision-register entries from Jake H. Davis (23 Oct, Slack): first subset doors 2/4/7,
+> dispositions deferred, divided-group reworked, one-scenario costing agreed, audience framing
+> attributed to him at suggestion status. Adds FR20 (context precedes practice) and a stated
+> direction toward group work. **v0.2 remains governing until a revision is reviewed and adopted.**
+
+### `07_Source_Papers/`
+Published work supplied by participants as conceptual grounding. Davis (2023), *Theravāda
+Buddhist philosophy*, Routledge — the source of the dukkha-as-un-ease reading behind the
+friction framing. Reference only; see the folder README for constraints on use.
 
 **v0.2 SHA256:** `fba4cd12044956341bafa743a9c20e45da7863c91dffafae80813272557ecfa5`
 This matches the governing hash cited inside the PWA plan — the plan and the spec in this

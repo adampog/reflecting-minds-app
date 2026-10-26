@@ -4,9 +4,13 @@ Added to the project 22 October 2026, pasted from an assistant conversation.
 
 ## Provenance and attribution
 
-**Attribution unconfirmed.** The human speaker is not named in the excerpt. From internal
-evidence they are not Alan, since they say "I've invited Alan." Whether the speaker is Jake or
-the project coordinator should be confirmed before this framing is cited as direction.
+**Attribution confirmed, 23 October 2026.** The human speaker is Jake H. Davis. Asked directly,
+he confirmed the framing is his, grounded in his reading of *dukkha* as un-ease (see
+`../07_Source_Papers/`), and asked that it **remain a suggestion rather than direction**, as he
+is open to better framings. That status is his to set and is preserved in v0.4 of the spec.
+
+*(Original note, now superseded: the speaker was unnamed in the excerpt; internal evidence
+ruled out Alan since they say "I've invited Alan.")*
 
 Following the convention used in the updated-model change brief, the human turns and the
 assistant turns are separated below. The assistant's replies are **proposals and commentary,
