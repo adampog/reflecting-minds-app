@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="140" viewBox="0 0 340 140" role="img" aria-labelledby="title desc">
+  <title id="title">Original plan with later notes</title>
+  <desc id="desc">A steady horizontal line begins at an unchanged solid plan block and continues through three lighter attached note marks.</desc>
+  <rect width="340" height="140" rx="12" fill="#EEF0EA"/>
+  <path d="M22 76H318" fill="none" stroke="#586A6B" stroke-width="1.75" stroke-linecap="round"/>
+  <rect x="26" y="50" width="82" height="52" rx="5" fill="#DDE3DD" stroke="#485D69" stroke-width="1.75"/>
+  <path d="M145 76v-14h35v14m28 0V54h35v22m28 0v-8h31v8" fill="none" stroke="#9AA8A3" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

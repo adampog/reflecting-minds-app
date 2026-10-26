@@ -1,0 +1,12 @@
+{
+  "asset_id": "rma-contemporary-riverbank-comparison",
+  "version": "0.1.0",
+  "status": "review_candidate",
+  "creator": "art.builder@shared-art-assets",
+  "source": "hand-built SVG from the selected Layered Paper direction and full-set app brief",
+  "external_assets": [],
+  "font": "none",
+  "image_generation_calls": 0,
+  "production_use_approved": false,
+  "parity_reference": "yt-art-library/rma/plates/door-deck/v0.1.3/PARITY.json"
+}

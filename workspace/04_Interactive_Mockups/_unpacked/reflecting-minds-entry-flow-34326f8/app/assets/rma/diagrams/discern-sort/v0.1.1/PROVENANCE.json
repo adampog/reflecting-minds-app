@@ -1,0 +1,12 @@
+{
+  "asset_id": "rma-discern-sort",
+  "version": "0.1.1",
+  "status": "review_candidate",
+  "creator": "art.builder@shared-art-assets",
+  "supersedes_for_review": "yt-art-library/rma/diagrams/discern-sort/v0.1.0/",
+  "source": "bounded path repair per ART-DIRECTOR-RMA-STAGE-DIAGRAMS-REVIEW-20261023.md, SHA256 9aedf4d9b901c44075f191b42970a89dd3b5ca3f0a72a56112c0f52767cfcdd8",
+  "external_assets": [],
+  "font": "system-ui in labels.html",
+  "image_generation_calls": 0,
+  "production_use_approved": false
+}

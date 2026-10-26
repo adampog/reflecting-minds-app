@@ -1,0 +1,62 @@
+{
+  "status": "ready_for_artdirector_review",
+  "asset_set": "RMA entry door deck",
+  "version": "v0.1.3",
+  "from_version": "v0.1.2",
+  "plate_count": 9,
+  "target_refinements": [
+    "just-curious: wall panels and second shelf line",
+    "seen-or-heard: awning stripes, crates and packed earth",
+    "personal-tension: additional orchard trees and fence rails",
+    "values-tension: balanced field furrows",
+    "self-understanding: well and path-edge stone joints"
+  ],
+  "river_invariants": {
+    "seeing-differently": "byte-identical to v0.1.2",
+    "divided-group": "byte-identical to v0.1.2",
+    "river_reduction": "none"
+  },
+  "parity": {
+    "result": "PASS",
+    "medians": {
+      "mean_luminance_linear": 0.4083271921,
+      "luminance_std_linear": 0.1435504407,
+      "mean_saturation_hsv": 0.4873243570,
+      "sobel_edge_density_at_300x200_threshold5": 0.2795234221,
+      "focal_bbox_area_viewbox_px2": 9595,
+      "colorfulness_hasler_susstrunk": 85.3919923950,
+      "l1_edge_density_at_120x80_gt12": 0.1536006808
+    },
+    "worst_relative_delta": 0.18906,
+    "worst_plate": "self-understanding",
+    "worst_metric": "l1_edge_density_at_120x80_gt12",
+    "original_metrics_tolerance_fraction": 0.12,
+    "colorfulness_hasler_susstrunk_tolerance_fraction": 0.15,
+    "thumbnail_metric": "On 120x80 Lanczos grayscale, count interior pixels where |dx| + |dy| > 12; denominator 119x79.",
+    "thumbnail_metric_tolerance_fraction": 0.20,
+    "source": "PARITY.json"
+  },
+  "source_and_method": {
+    "hand_built_svg": true,
+    "image_generation_calls": 0,
+    "external_assets": 0,
+    "outputs_manifest": "MANIFEST.sha256"
+  },
+  "visual_inspection": {
+    "seen": [
+      "300x200 contact sheet in colour and grayscale",
+      "120x80 contact sheet in colour and grayscale"
+    ],
+    "observations": "The five amended scenes show additional thumbnail-scale structure; the two river scenes remain intact. Individual 1200x800 plates were not inspected one by one.",
+    "not_checked": [
+      "individual 1200x800 plates",
+      "application integration or device rendering"
+    ]
+  },
+  "authority_limits": {
+    "production_use": "not approved by this delivery",
+    "publication": "not approved",
+    "uploads": "HOLD",
+    "independent_review": "pending art.producer"
+  }
+}

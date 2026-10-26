@@ -97,7 +97,7 @@ through the source workspace. ChatGPT *Data Controls → Export Data* is the use
 route to the full history if it is ever needed.
 
 ### `03_Walkthrough_Videos/`
-Six MP4 demonstrations, all verified playable:
+Seven MP4 demonstrations, all verified playable:
 
 | Video | Duration | Resolution | Audio |
 |---|---|---|---|
@@ -107,6 +107,7 @@ Six MP4 demonstrations, all verified playable:
 | Voice-first conversation | 268.02s | 1280×720 | AAC |
 | Updated model walkthrough v1 | 281.52s | 1280×720 | — |
 | Social entry walkthrough | 286.48s | 1280×720 | — |
+| Entry-flow walkthrough (23 Oct, rig commit `34326f86`) | 157.48s | 390×844 | — |
 
 The 183.28s figure matches the "accepted 183.28-second mockup" cited in the PWA plan.
 
@@ -115,11 +116,14 @@ is simulated. Updated-model group screens are proposals. None demonstrates worki
 privacy, or security behavior.
 
 ### `04_Interactive_Mockups/`
-Two tap-through viewers, original ZIPs retained plus `_unpacked/` for browsing:
+Three tap-through viewers, original ZIPs retained plus `_unpacked/` for browsing:
 
 - `reflecting-minds-v02-viewer/` — v0.2 tap-through; `app/app.js` (32 KB), content, styles.
   Open `app/index.html` in a browser.
 - `reflecting-minds-updated-model-v1/` — storyboard-driven frames; open `index.html`.
+- `reflecting-minds-entry-flow-34326f8/` — the rig's last delivery (brief v2, Direction A layered
+  paper, Codex QA accepted 23 Oct). Full source tree at commit `34326f86`; open `app/index.html`
+  at phone width. QA and delivery manifest in `docs/qa/delivery/`.
 
 Their localStorage code, placeholder content, and fictional branches are **disposable
 demonstrators**. Not the production architecture. Not approved content.

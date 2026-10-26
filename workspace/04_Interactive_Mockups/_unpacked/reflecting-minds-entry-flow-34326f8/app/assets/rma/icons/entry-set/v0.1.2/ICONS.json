@@ -1,0 +1,70 @@
+{
+  "status": "proposed, review-only",
+  "grid": "24x24",
+  "stroke": "currentColor",
+  "fill": "none",
+  "stroke_width": 1.75,
+  "categories": {
+    "entry": [
+      "list",
+      "reel",
+      "surprise",
+      "fictional",
+      "personal",
+      "neutral",
+      "back",
+      "close",
+      "info",
+      "door",
+      "leave"
+    ],
+    "stages": [
+      "notice",
+      "motivation",
+      "compare",
+      "discern",
+      "respond",
+      "review"
+    ],
+    "utility": [
+      "save",
+      "export",
+      "delete",
+      "report",
+      "device",
+      "pause",
+      "play",
+      "privacy"
+    ]
+  },
+  "icons": [
+    "list",
+    "reel",
+    "surprise",
+    "fictional",
+    "personal",
+    "neutral",
+    "back",
+    "close",
+    "info",
+    "door",
+    "leave",
+    "notice",
+    "motivation",
+    "compare",
+    "discern",
+    "respond",
+    "review",
+    "save",
+    "export",
+    "delete",
+    "report",
+    "device",
+    "pause",
+    "play",
+    "privacy"
+  ],
+  "stage_icons_are_navigation_only": true,
+  "completion_state_or_reward_marks": false,
+  "source": "original hand-built SVG paths, rounded layered-paper direction A"
+}

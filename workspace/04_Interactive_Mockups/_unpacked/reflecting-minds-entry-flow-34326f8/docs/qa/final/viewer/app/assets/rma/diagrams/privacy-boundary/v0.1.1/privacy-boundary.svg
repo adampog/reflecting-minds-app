@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="160" viewBox="0 0 340 160" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed on-device answer boundary</title>
+  <desc id="desc">A quiet proposed boundary surrounds a device frame containing three answer cards. Faint unconnected server, analytics, and AI service placeholders sit outside the boundary.</desc>
+  <rect width="340" height="160" rx="12" fill="#EEF0EA"/>
+  <rect x="9" y="16" width="190" height="128" rx="10" fill="#F8F8F4" stroke="#586A6B" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="40" y="32" width="128" height="94" rx="8" fill="#E4E8E2" stroke="#485D69" stroke-width="2"/>
+  <rect x="48" y="41" width="112" height="72" rx="4" fill="#F8F8F4" stroke="#9AA8A3" stroke-width="1"/>
+  <rect x="60" y="49" width="88" height="15" rx="4" fill="#E9ECE6"/>
+  <rect x="60" y="69" width="88" height="15" rx="4" fill="#E9ECE6"/>
+  <rect x="60" y="89" width="88" height="15" rx="4" fill="#E9ECE6"/>
+  <path d="M90 119h28" stroke="#485D69" stroke-width="2" stroke-linecap="round"/>
+  <!-- Faint, unconnected placeholders sit beyond the proposed boundary. -->
+  <g fill="none" stroke="#9AA8A3" stroke-width="1.5" opacity=".62" stroke-linecap="round" stroke-linejoin="round">
+    <g id="server-placeholder" transform="translate(214 27)"><rect x="0" y="0" width="116" height="26" rx="4"/><g transform="translate(82 4)"><path d="M0 0h28M0 9h28M0 18h28"/><circle cx="3" cy="4" r="1"/><circle cx="3" cy="13" r="1"/><circle cx="3" cy="22" r="1"/></g></g>
+    <g id="analytics-placeholder" transform="translate(214 67)"><rect x="0" y="0" width="116" height="26" rx="4"/><g transform="translate(86 4)"><path d="M0 17v-4m8 4V3m8 14V8m8 9v-7"/></g></g>
+    <g id="ai-placeholder" transform="translate(214 107)"><rect x="0" y="0" width="116" height="26" rx="4"/><g transform="translate(86 4)"><rect x="5" y="0" width="20" height="18" rx="3"/><path d="M0 4h5m20 0h5M0 9h5m20 0h5M0 14h5m20 0h5"/><circle cx="15" cy="9" r="3"/></g></g>
+  </g>
+</svg>

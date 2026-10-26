@@ -1,0 +1,11 @@
+{
+  "asset_id": "rma-arrival-threshold",
+  "version": "0.1.0",
+  "status": "review_candidate",
+  "creator": "art.builder@shared-art-assets",
+  "source": "hand-built SVG from the selected Layered Paper direction and app asset request r1.2",
+  "external_assets": [],
+  "font": "none",
+  "image_generation_calls": 0,
+  "production_use_approved": false
+}
