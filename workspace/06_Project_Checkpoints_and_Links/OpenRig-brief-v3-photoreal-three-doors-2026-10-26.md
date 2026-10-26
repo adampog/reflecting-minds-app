@@ -83,7 +83,18 @@ Short, looping or near-still. The still frame comes first and must work on its o
 adds atmosphere to it — water moving past the stakes, lamplight at the fork — not narrative.
 Nothing in motion that implies an outcome. `prefers-reduced-motion` gets the still.
 
-If the seats lack image or video generation tooling, say so in the first report rather than
+### Imagery source (amended 26 October, Alan's decision)
+
+The seats do not generate images or video. All stills, video loops, icons and diagrams come from
+the Art Department (`art-producer@shared-art-assets`) as **reusable library assets**, because this
+is only a mockup.
+
+- Before building, send Art a short asset list: each asset, where it is used, size and format.
+- Reuse accepted items from `yt-art-library` where they fit.
+- Pin the assets you use and copy them byte-identical, as the entry-flow mockup did.
+- Art is saved for reuse but is not final: it may change depending on later choices.
+
+If Art cannot supply photoreal stills or video, say so in the first report rather than
 substituting. A brief that can't be executed as written needs rewriting, not improvising.
 
 ---
