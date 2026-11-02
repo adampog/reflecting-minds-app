@@ -1,0 +1,7 @@
+# Entry-flow r2 recheck — HOLD for one repair regression
+
+Candidate 630df477; FROZEN-r2.sha256 SHA256 5ae524ff33151226a76f63a21abec0f36eb8644df522b334629943623be107aa; all 189 entries verified. Independently reran the original check: 30/30 pass, zero page errors/external requests. Reviewed changed code and stills 12, 18, 19: scene is quiet text, Text only door/privacy retain full content and qualification. Native swipe, neutral-route parity and preference changes pass. Original four findings are resolved; the scene disagreement is retained correctly in plan.md.
+
+One repair regression blocks render: app/art.js doorArt now emits `alt=""${esc(p.alt)} Fictional drawing."`. The extra quote closes alt immediately. Browser DOM confirms all nine list plates have empty alt and the description has become stray attributes. This loses the authored text alternatives in the visual route. Remove that extra quote, leaving the full escaped description inside alt. Assert rendered alt equals the pinned description plus ' Fictional drawing.' for all nine plates (not merely a nonzero count), then provide the repaired file hash/frozen manifest. No other implementation changes requested.
+
+This is the second bounded repair round; one-line regression fix, no new art or render. A complete additional dry run is unnecessary if only the quoting and its regression assertion change; affected screenshot/art DOM plus frozen hash verification suffice. Final video remains unmade and unauthorized until the recheck PASS.

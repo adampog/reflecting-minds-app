@@ -1,0 +1,246 @@
+{
+  "method": {
+    "color_space": "sRGB input; linear-light relative luminance",
+    "mean_luminance": "mean WCAG relative luminance",
+    "luminance_std": "population standard deviation of WCAG relative luminance",
+    "mean_saturation": "HSV S component in [0,1]",
+    "edge_density": "300x200: 3x3 Sobel gradient magnitude >= 5 on linear luminance scaled to 0..255. Thumbnail: convert 1200x800 export to greyscale, Lanczos downscale to 120x80, compute forward dx and dy at the 119x79 interior pixels, count |dx|+|dy| > 12 grey levels and divide by 119*79.",
+    "colorfulness": "Hasler-S\u00fcsstrunk: sqrt(std(R-G)^2 + std(0.5*(R+G)-B)^2) + 0.3*sqrt(mean(R-G)^2 + mean(0.5*(R+G)-B)^2), on 300x200 sRGB values scaled to 0..255",
+    "focal_bbox": "alpha bounds of isolated SVG focal groups, rasterized at 600x400; P2 carries forward its accepted source focal bbox because its SVG and PNGs remain byte-identical"
+  },
+  "tolerance_fraction": 0.12,
+  "additional_tolerances": {
+    "colorfulness_hasler_susstrunk": 0.15,
+    "l1_edge_density_at_120x80_gt12": 0.2
+  },
+  "medians": {
+    "mean_luminance_linear": 0.4083271920681,
+    "luminance_std_linear": 0.14355044066905975,
+    "mean_saturation_hsv": 0.4873243570327759,
+    "sobel_edge_density_at_300x200_threshold5": 0.2795234221408718,
+    "focal_bbox_area_viewbox_px2": 9595.0,
+    "colorfulness_hasler_susstrunk": 85.39199239501326,
+    "l1_edge_density_at_120x80_gt12": 0.15360068077864056
+  },
+  "plates": {
+    "another-perspective": {
+      "mean_luminance_linear": 0.4546317756175995,
+      "luminance_std_linear": 0.14115895330905914,
+      "mean_saturation_hsv": 0.5161617994308472,
+      "sobel_edge_density_at_300x200_threshold5": 0.25806724967798794,
+      "colorfulness_hasler_susstrunk": 86.94121091377991,
+      "l1_edge_density_at_120x80_gt12": 0.1433890011700883,
+      "focal_bbox_viewbox_px": [
+        251,
+        205,
+        352,
+        300
+      ],
+      "focal_bbox_area_viewbox_px2": 9595
+    },
+    "divided-group": {
+      "mean_luminance_linear": 0.40445202589035034,
+      "luminance_std_linear": 0.14260372519493103,
+      "mean_saturation_hsv": 0.4873243570327759,
+      "sobel_edge_density_at_300x200_threshold5": 0.27179513253338755,
+      "colorfulness_hasler_susstrunk": 97.68470297806326,
+      "l1_edge_density_at_120x80_gt12": 0.15360068077864056,
+      "focal_bbox_viewbox_px": [
+        164,
+        174,
+        324,
+        235
+      ],
+      "focal_bbox_area_viewbox_px2": 9760
+    },
+    "just-curious": {
+      "mean_luminance_linear": 0.42364734411239624,
+      "luminance_std_linear": 0.1603870987892151,
+      "mean_saturation_hsv": 0.4575176537036896,
+      "sobel_edge_density_at_300x200_threshold5": 0.2526269405464036,
+      "colorfulness_hasler_susstrunk": 85.39199239501326,
+      "l1_edge_density_at_120x80_gt12": 0.12892245505797256,
+      "focal_bbox_viewbox_px": [
+        149,
+        272,
+        451,
+        305
+      ],
+      "focal_bbox_area_viewbox_px2": 9966
+    },
+    "personal-tension": {
+      "mean_luminance_linear": 0.4083271920681,
+      "luminance_std_linear": 0.1459880769252777,
+      "mean_saturation_hsv": 0.4905748963356018,
+      "sobel_edge_density_at_300x200_threshold5": 0.28379431902921837,
+      "colorfulness_hasler_susstrunk": 73.03554742772187,
+      "l1_edge_density_at_120x80_gt12": 0.1735985533453888,
+      "focal_bbox_viewbox_px": [
+        252,
+        209,
+        358,
+        307
+      ],
+      "focal_bbox_area_viewbox_px2": 10388
+    },
+    "seeing-differently": {
+      "mean_luminance_linear": 0.3841100335121155,
+      "luminance_std_linear": 0.13835179805755615,
+      "mean_saturation_hsv": 0.490103542804718,
+      "sobel_edge_density_at_300x200_threshold5": 0.2891159921361264,
+      "colorfulness_hasler_susstrunk": 97.8706680870258,
+      "l1_edge_density_at_120x80_gt12": 0.18019359642591215,
+      "focal_bbox_viewbox_px": [
+        258,
+        230,
+        355,
+        322
+      ],
+      "focal_bbox_area_viewbox_px2": 8924
+    },
+    "seen-or-heard": {
+      "mean_luminance_linear": 0.42860332131385803,
+      "luminance_std_linear": 0.14878375828266144,
+      "mean_saturation_hsv": 0.46852338314056396,
+      "sobel_edge_density_at_300x200_threshold5": 0.279540370144397,
+      "colorfulness_hasler_susstrunk": 74.62003740479791,
+      "l1_edge_density_at_120x80_gt12": 0.1301989150090416,
+      "focal_bbox_viewbox_px": [
+        245,
+        213,
+        364,
+        298
+      ],
+      "focal_bbox_area_viewbox_px2": 10115
+    },
+    "self-understanding": {
+      "mean_luminance_linear": 0.3982698619365692,
+      "luminance_std_linear": 0.15630924701690674,
+      "mean_saturation_hsv": 0.446639746427536,
+      "sobel_edge_density_at_300x200_threshold5": 0.250271168056403,
+      "colorfulness_hasler_susstrunk": 73.85270449242269,
+      "l1_edge_density_at_120x80_gt12": 0.12456121689182002,
+      "focal_bbox_viewbox_px": [
+        249,
+        229,
+        351,
+        316
+      ],
+      "focal_bbox_area_viewbox_px2": 8874
+    },
+    "uncertainty": {
+      "mean_luminance_linear": 0.4295191466808319,
+      "luminance_std_linear": 0.14054708182811737,
+      "mean_saturation_hsv": 0.5020350813865662,
+      "sobel_edge_density_at_300x200_threshold5": 0.2800827062572029,
+      "colorfulness_hasler_susstrunk": 86.59312435741435,
+      "l1_edge_density_at_120x80_gt12": 0.17785341984895223,
+      "focal_bbox_viewbox_px": [
+        253,
+        242,
+        347,
+        335
+      ],
+      "focal_bbox_area_viewbox_px2": 8742
+    },
+    "values-tension": {
+      "mean_luminance_linear": 0.3944564461708069,
+      "luminance_std_linear": 0.14355044066905975,
+      "mean_saturation_hsv": 0.44954636693000793,
+      "sobel_edge_density_at_300x200_threshold5": 0.2795234221408718,
+      "colorfulness_hasler_susstrunk": 73.34073700454697,
+      "l1_edge_density_at_120x80_gt12": 0.1650888203382619,
+      "focal_bbox_viewbox_px": [
+        248,
+        222,
+        352,
+        313
+      ],
+      "focal_bbox_area_viewbox_px2": 9464
+    }
+  },
+  "absolute_relative_delta_from_median": {
+    "another-perspective": {
+      "mean_luminance_linear": 0.1134,
+      "luminance_std_linear": 0.01666,
+      "mean_saturation_hsv": 0.05918,
+      "sobel_edge_density_at_300x200_threshold5": 0.07676,
+      "focal_bbox_area_viewbox_px2": 0.0,
+      "colorfulness_hasler_susstrunk": 0.01814,
+      "l1_edge_density_at_120x80_gt12": 0.06648
+    },
+    "divided-group": {
+      "mean_luminance_linear": 0.00949,
+      "luminance_std_linear": 0.0066,
+      "mean_saturation_hsv": 0.0,
+      "sobel_edge_density_at_300x200_threshold5": 0.02765,
+      "focal_bbox_area_viewbox_px2": 0.0172,
+      "colorfulness_hasler_susstrunk": 0.14396,
+      "l1_edge_density_at_120x80_gt12": 0.0
+    },
+    "just-curious": {
+      "mean_luminance_linear": 0.03752,
+      "luminance_std_linear": 0.11729,
+      "mean_saturation_hsv": 0.06116,
+      "sobel_edge_density_at_300x200_threshold5": 0.09622,
+      "focal_bbox_area_viewbox_px2": 0.03867,
+      "colorfulness_hasler_susstrunk": 0.0,
+      "l1_edge_density_at_120x80_gt12": 0.16066
+    },
+    "personal-tension": {
+      "mean_luminance_linear": 0.0,
+      "luminance_std_linear": 0.01698,
+      "mean_saturation_hsv": 0.00667,
+      "sobel_edge_density_at_300x200_threshold5": 0.01528,
+      "focal_bbox_area_viewbox_px2": 0.08265,
+      "colorfulness_hasler_susstrunk": 0.1447,
+      "l1_edge_density_at_120x80_gt12": 0.13019
+    },
+    "seeing-differently": {
+      "mean_luminance_linear": 0.05931,
+      "luminance_std_linear": 0.03621,
+      "mean_saturation_hsv": 0.0057,
+      "sobel_edge_density_at_300x200_threshold5": 0.03432,
+      "focal_bbox_area_viewbox_px2": 0.06993,
+      "colorfulness_hasler_susstrunk": 0.14613,
+      "l1_edge_density_at_120x80_gt12": 0.17313
+    },
+    "seen-or-heard": {
+      "mean_luminance_linear": 0.04966,
+      "luminance_std_linear": 0.03646,
+      "mean_saturation_hsv": 0.03858,
+      "sobel_edge_density_at_300x200_threshold5": 6e-05,
+      "focal_bbox_area_viewbox_px2": 0.05419,
+      "colorfulness_hasler_susstrunk": 0.12615,
+      "l1_edge_density_at_120x80_gt12": 0.15235
+    },
+    "self-understanding": {
+      "mean_luminance_linear": 0.02463,
+      "luminance_std_linear": 0.08888,
+      "mean_saturation_hsv": 0.08349,
+      "sobel_edge_density_at_300x200_threshold5": 0.10465,
+      "focal_bbox_area_viewbox_px2": 0.07514,
+      "colorfulness_hasler_susstrunk": 0.13513,
+      "l1_edge_density_at_120x80_gt12": 0.18906
+    },
+    "uncertainty": {
+      "mean_luminance_linear": 0.0519,
+      "luminance_std_linear": 0.02092,
+      "mean_saturation_hsv": 0.03019,
+      "sobel_edge_density_at_300x200_threshold5": 0.002,
+      "focal_bbox_area_viewbox_px2": 0.0889,
+      "colorfulness_hasler_susstrunk": 0.01407,
+      "l1_edge_density_at_120x80_gt12": 0.15789
+    },
+    "values-tension": {
+      "mean_luminance_linear": 0.03397,
+      "luminance_std_linear": 0.0,
+      "mean_saturation_hsv": 0.07752,
+      "sobel_edge_density_at_300x200_threshold5": 0.0,
+      "focal_bbox_area_viewbox_px2": 0.01365,
+      "colorfulness_hasler_susstrunk": 0.14113,
+      "l1_edge_density_at_120x80_gt12": 0.07479
+    }
+  },
+  "result": "PASS"
+}

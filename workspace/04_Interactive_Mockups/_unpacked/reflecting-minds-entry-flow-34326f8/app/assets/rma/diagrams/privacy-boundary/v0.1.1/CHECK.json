@@ -1,0 +1,12 @@
+{
+  "viewBox": "0 0 340 160",
+  "device_and_answer_cards_inside_boundary": true,
+  "outside_placeholders": ["server", "analytics", "AI service"],
+  "outside_placeholders_faint_and_unconnected": true,
+  "placeholder_labels_in_html": true,
+  "svg_text": 0,
+  "shield_lock_tick_cross_or_assurance_motif": false,
+  "persistent_non_assurance_caption_in_html": true,
+  "production_use_approved": false,
+  "result": "READY_FOR_ART_DIRECTOR_REVIEW"
+}

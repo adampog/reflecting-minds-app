@@ -1,0 +1,30 @@
+# Entry-flow independent pre-render review r1 — HOLD
+
+Candidate: 7c4826dae59f81990da0e6d852f55253b58f462d. HEAD 19eeb93f565e25a5fa4aa9dfa887b34562f0819c adds the frozen-manifest receipt. FROZEN-r1.sha256 SHA256 36535006deb7e54ec7709612abd8da2b954769f198b34e4911d88e7052c0c444; all 182 entries verified. Reviewed README, plan, storyboard, app logic/content/CSS/art helpers, recording script, 22-still contact sheet, full-size list and scene, and Art parity sheet. Ten pinned asset manifests and 131 payloads independently match library originals.
+
+## Four bounded findings before the single render
+
+1. **Quiet threshold: remove the full-colour scene plate after privacy.** In storyboard 12 the large orange/teal river plate dominates the room immediately after 'Quiet from here on'. This conflicts with the brief's entry-only brightness and the recorded threshold. I disagree with the builder's 'content rather than decoration' exception: text already carries the full fictional scenario, so saturation is optional here. Use the builder's proposed text-only scene fallback, keeping direction A unchanged across entry. Do not recolour Art's files or silently move toward B. The quiet Notice and later-stage treatment otherwise works.
+2. **Actual swipe fails in the recording path.** At 390×844, the exact mouse gesture used by record-entry.js leaves the first card unchanged; storyboard 04 and 05 accordingly show the same door. Instrumentation records IMG pointerdown → native dragstart → pointercancel, without pointerup. Disabling native image dragging in the test DOM alone changes the card correctly; dispatched pointer events also work. Fix native drag interference at the shared plate/card boundary, then assert the expected card changes after each recorded swipe. Buttons already traverse all nine cards. Do not claim a swipe demonstration from an unchanged card.
+3. **'Text only' is cosmetic.** Choose the setting, close the sheet: the door still has an image; after fictional privacy the scene still has an image. prefs.presentation changes only its label; rendering does not consult it. Honour Text only throughout the experience with complete text equivalents, keeping answers, or explicitly disable the unsupported option rather than presenting it as working. Prefer the small real implementation, as this is a required presentation choice and text must work without media.
+4. **Reel/list neutral-route parity.** List and arrival expose Neutral introduction; deck does not, despite README's claim of identical actions. Add the same neutral shortcut to the reel so the route that asks for least disclosure is equally accessible. No new destination or content needed.
+
+Evidence: /tmp/rma-entry-qa/check-r1.js and check-r1.json: 26 passing observations, four failed assertions (Text only fails on two screens). The visual threshold finding is a separate reviewer judgment. swipe-r1.png and scene-text-only-r1.png illustrate the failures. No candidate file changed; only the isolated test page DOM was varied for root-cause diagnosis. No render run.
+
+## Four direct judgment answers for A (r1)
+
+**Does entry feel safe to step into, or sold?** More inviting than sales-like: equal-sized route buttons, plain optional language, no sign-up, reward or benefit promise. The open threshold and coherent layered paper feel deliberately made. This is a reviewer impression, not evidence of emotional safety; the neutral shortcut imbalance should be repaired.
+
+**Does any frame imply an outcome, however gently?** I see no resolved conflict, before/after improvement, celebration, reward, or clear-sky transformation in the reviewed frames. The river's two stakes remain apart; the old flood line is now visible at full plate size. Notice's widening drawing illustrates an invitation, not a measured result. No efficacy conclusion follows.
+
+**Would brightness read as tone-deaf in real difficulty?** It could for some users; no participants have tested this. A's saturation is defensible at the optional door, but the large bright plate after privacy currently jars and weakens the quiet-room boundary. HOLD that exception; retain A at entry and use the complete scene text in the room. Historical displacement also remains unvalidated, with the comparison correctly labelled review-only.
+
+**Does list work as well as reel, or feel a fallback?** It is visibly first, equally finished, and all nine doors open in one tap. It reads as a primary route, not a fallback. It currently works better: reel mouse swiping fails and lacks the neutral shortcut. Repair those so the parity claim is true.
+
+## Plate parity judgment and limits
+
+At the delivered full-sheet and actual 104px-wide list scale, distinct settings remain recognisable; neither the well nor the water plates demands a new art round in my judgment. The letter and bowls are simpler, and water plates have broader teal, but I see no featured/hero door or material salience outlier requiring a hold. Art's well detail metric marginal miss remains recorded; metrics are not proof of subjective equality. Do not change A's chosen saturation or reopen the direction decision.
+
+Passed targeted checks include all nine list openings and reel-button cards, privacy guard including stage jumps, 12px privacy labels and explicit illustrative qualification, memory-only pre-save draft, own-words review, unknown/retired fallback, reduced-motion suppression, 320/390px entry overflow, persistent scrolled mock/Exit, zero page errors and zero external requests in this run. This is local desktop Chromium, not real phones, screen-reader conformance, emotional-safety testing or production privacy/storage/security proof. Exact final MP4 and viewer acceptance remains pending.
+
+Next: builder repairs these four bounded findings, records this disagreement and supplies new hashes plus affected stills and gesture evidence. Recheck before authorizing ONE render; no full render authorized by this HOLD. Two repair rounds maximum before escalation per agreed stop rule.

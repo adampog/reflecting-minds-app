@@ -1,0 +1,39 @@
+:root {
+  --rma-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rma-font-weight-body: 400;
+  --rma-font-weight-medium: 500;
+  --rma-font-weight-strong: 600;
+  --rma-type-caption: 12px;
+  --rma-type-body: 16px;
+  --rma-type-subheading: 20px;
+  --rma-type-heading: 28px;
+  --rma-space-1: 4px;
+  --rma-space-2: 8px;
+  --rma-space-3: 12px;
+  --rma-space-4: 16px;
+  --rma-space-6: 24px;
+  --rma-space-8: 32px;
+  --rma-space-12: 48px;
+  --rma-radius-small: 4px;
+  --rma-radius-control: 8px;
+  --rma-radius-card: 12px;
+}
+
+:root,
+[data-rma-space="entry"] {
+  --rma-bg: #F7E2C7;
+  --rma-surface: #FFF3E4;
+  --rma-text: #2A3430;
+  --rma-muted: #4D5A4F;
+  --rma-accent: #8A472F;
+  --rma-line: #53634F;
+}
+
+[data-rma-space="room"] {
+  --rma-bg: #EEF0EA;
+  --rma-surface: #F8F8F4;
+  --rma-text: #2C3533;
+  --rma-muted: #4D5A57;
+  --rma-accent: #485D69;
+  --rma-line: #586A6B;
+}

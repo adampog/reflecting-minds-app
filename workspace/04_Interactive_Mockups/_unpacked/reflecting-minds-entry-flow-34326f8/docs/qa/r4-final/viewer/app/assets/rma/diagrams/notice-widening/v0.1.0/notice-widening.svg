@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="140" viewBox="0 0 340 140" role="img" aria-labelledby="title desc">
+  <title id="title">Attention widening and resting</title>
+  <desc id="desc">Four quiet, parallel lines begin close together, open into a broader space, and settle into level lines.</desc>
+  <rect width="340" height="140" rx="12" fill="#EEF0EA"/>
+  <path d="M20 65 C60 64 86 64 117 59 C148 54 159 42 190 42 H320" fill="none" stroke="#485D69" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 69 C60 68 87 68 119 66 C149 64 160 61 190 61 H320" fill="none" stroke="#586A6B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 73 C60 74 87 74 119 76 C149 78 160 81 190 81 H320" fill="none" stroke="#586A6B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 77 C60 78 86 78 117 83 C148 88 159 100 190 100 H320" fill="none" stroke="#485D69" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

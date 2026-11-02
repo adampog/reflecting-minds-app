@@ -1,0 +1,35 @@
+{
+  "changed_zip_files": [
+    "app/plate-comparison.html"
+  ],
+  "sample_times": [
+    3,
+    11,
+    20,
+    29,
+    36,
+    45,
+    52,
+    60,
+    67,
+    71,
+    75,
+    83,
+    91,
+    101,
+    112,
+    122,
+    132,
+    138,
+    141,
+    143,
+    149,
+    156
+  ],
+  "history": {
+    "8e3f1630c9f309f4cac44ac4fba969a3f2b567fcecf651b88bf2e9830b0d31c8": "/home/alan/Projects/reflecting-minds-app-entry/out/history/entry-walkthrough-r3-hold.mp4",
+    "abfce9dc9f5425b10cc2dab80447914671fd122a483ad8ddb7847bd10159a1f0": "/home/alan/Projects/reflecting-minds-app-entry/out/history/reflecting-minds-entry-viewer-r3-hold.zip",
+    "232a37c9af8518b642ff80e9215de4a61d37a0f618a12c9fc0de4f8ee9b336f6": "/home/alan/Projects/reflecting-minds-app-entry/out/history/MANIFEST-entry-delivery-r3-hold.sha256",
+    "46ad829a156b247732bf2487480cdf1cea1150e98b9761442b8c0c063ad47bee": "/home/alan/Projects/reflecting-minds-app-entry/out/history/render-r3.log"
+  }
+}

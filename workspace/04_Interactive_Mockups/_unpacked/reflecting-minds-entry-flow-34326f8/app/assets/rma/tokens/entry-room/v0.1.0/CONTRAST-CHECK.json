@@ -1,0 +1,23 @@
+{
+  "method": "WCAG relative luminance; values recomputed from tokens.json builder",
+  "minimum_text_background_ratio": 4.5,
+  "ratios": {
+    "entry": {
+      "text_on_bg": 10.21,
+      "text_on_surface": 11.76,
+      "muted_on_bg": 5.76,
+      "muted_on_surface": 6.64,
+      "accent_on_bg": 5.51,
+      "accent_on_surface": 6.35
+    },
+    "room": {
+      "text_on_bg": 10.99,
+      "text_on_surface": 11.85,
+      "muted_on_bg": 6.27,
+      "muted_on_surface": 6.77,
+      "accent_on_bg": 6.01,
+      "accent_on_surface": 6.48
+    }
+  },
+  "result": "PASS"
+}

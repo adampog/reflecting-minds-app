@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflecting Minds – plate comparison (review only)</title>
+<link rel="stylesheet" href="assets/rma/tokens/entry-room/v0.1.0/tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-rma-space="entry">
+<div class="phone">
+  <div class="mock-banner" role="note">MOCK DEMONSTRATOR · review comparison, not part of the app flow · fictional drawings</div>
+  <main id="screen" data-screen="plate-comparison">
+    <h1>Displaced or contemporary?</h1>
+    <p>The same door, <i>Seeing things differently</i>, drawn two ways. This page is here so the content owner can compare whether a displaced historical setting suits someone in live difficulty. It is untested, and neither version is chosen.</p>
+    <div id="pair"></div>
+    <p class="muted">Both drawings by the Art Department, direction A. Placeholder, unreviewed.</p>
+  </main>
+</div>
+<script src="content.js"></script>
+<script src="assets/plates.js"></script>
+<script>
+  const esc = v => String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+  const fig = (label, p) => `<figure class="card"><img class="plate" src="${p.src}" alt="${esc(p.alt)} Fictional drawing."><figcaption><b>${label}</b><br><span class="muted">${esc(p.alt)}</span></figcaption></figure>`;
+  document.getElementById('pair').innerHTML = fig('Displaced setting (deck plate)', RMA_PLATES['seeing-differently']) + fig('Contemporary, culturally unmarked', RMA_ART['contemporary-riverbank']);
+</script>
+</body>
+</html>

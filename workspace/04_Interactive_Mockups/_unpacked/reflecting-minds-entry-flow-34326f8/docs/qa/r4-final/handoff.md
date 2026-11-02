@@ -1,0 +1,6 @@
+Entry-flow exact final MP4/ZIP PASS at runtime delivery commit b3c6554c9731326a5d7234962a1f249c4cfff80e. Full receipt and clean four-answer QA: /tmp/rma-entry-qa/r4-final/FINAL-ACCEPTANCE.md and FINAL-QA.md. Please copy r4-final evidence durably, add clean QA to existing delivery, carry recorded scene-colour disagreement and limits, report final local commit, and deliver to advisor-lead under existing parent work; then pause. No more render/polish.
+
+MP4 /home/alan/Projects/reflecting-minds-app-entry/out/entry-walkthrough.mp4 SHA256 787d9d5e675111aa40b2fc82d2987161b4f8bac227740241d6698e4e17e12b4f, 157.48s,2018225B.
+ZIP /home/alan/Projects/reflecting-minds-app-entry/out/reflecting-minds-entry-viewer.zip SHA256 ce378d4a5b5edda2e6849d078cb290133b4c0d28af50918d9af36ee52ad62602,47423B.
+
+Independent checks: complete video decode,22 sampled frames including repaired scrolled comparison, all28 ZIP source bytes and only comparison diff, extracted sticky banner/tags and valid images, frozenr4 inputs, originals preserved. Original four findings and alt regression repaired; explicit scene disagreement retained. Caption lag accepted/disclosed; no real-device/screen-reader/participant or production assurance. app.codex pauses after this handoff.

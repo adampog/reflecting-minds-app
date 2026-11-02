@@ -1,0 +1,139 @@
+{
+  "zip": [
+    {
+      "file": "README.md",
+      "sha256": "ba306440c9c1353e15c2aeb0435789fb642f39989214a9007c379151708efe7c"
+    },
+    {
+      "file": "docs/storyboard.md",
+      "sha256": "77b65b76dc3b8fda703eedea1eda722b2acf2f105f66a1af806ccb80d2fc4dba"
+    },
+    {
+      "file": "app/app.js",
+      "sha256": "f95cf3eb7b6eb11cae1f8b79b171b610d174bab22affbe11e7747d8b550c8927"
+    },
+    {
+      "file": "app/art.js",
+      "sha256": "7ad869d97d000c9c96f0a525f1976d9e6b42132ec1505e2097717f76e3b1157d"
+    },
+    {
+      "file": "app/assets/ASSETS.lock.json",
+      "sha256": "70fe6718cd045a9f8d217deea45123d3a22d0bd9d45f01cbd6bfbd3e47ab53fe"
+    },
+    {
+      "file": "app/assets/plates.js",
+      "sha256": "49a09558cf0bb9fe6e48677f771be730814fdbdd0dadd2e9ff50c8dd5a577bd1"
+    },
+    {
+      "file": "app/assets/rma/tokens/entry-room/v0.1.0/tokens.css",
+      "sha256": "556451aef6e0cdf6c5632ff200fc472249289bf31b641d720482f0d4012ca362"
+    },
+    {
+      "file": "app/assets/sprite.js",
+      "sha256": "383d937d1224cbfdcbf4b9ea7c1494bef0436df1b1b076a6ee2505c4bb3686e2"
+    },
+    {
+      "file": "app/content.js",
+      "sha256": "065ffd2c692122f02826dfd8b3abfdc3cb4934036bdac07d37905d2ada186a86"
+    },
+    {
+      "file": "app/index.html",
+      "sha256": "8681c5ebb7f8b2581007a190b0c3099664ae5cf10fa35d3c4d2c6a0b29f5ffc7"
+    },
+    {
+      "file": "app/plate-comparison.html",
+      "sha256": "ed5705a3c7aaaee2b64533901969fa2b3d9803a73895755ffd260f6ee4b449ec"
+    },
+    {
+      "file": "app/style.css",
+      "sha256": "6b3ba0b0a82d83fda825f0249d829e2d0d6c9d683be8c0a2b4b23121d35e1917"
+    },
+    {
+      "file": "app/assets/rma/diagrams/compare-views/v0.1.0/compare-views.svg",
+      "sha256": "4a168e731452550022fdc2682c3545dda88e47de800dfadd3fa053e4ea50c1f0"
+    },
+    {
+      "file": "app/assets/rma/diagrams/discern-sort/v0.1.1/discern-sort.svg",
+      "sha256": "6a5193b929dd222b492329153d8ed24645d12b4651e122b61d4e01ffce87a7af"
+    },
+    {
+      "file": "app/assets/rma/diagrams/notice-widening/v0.1.0/notice-widening.svg",
+      "sha256": "6679e1019e7b0a8e60338870ecf16a5191725da1bff5105e6bb4ee653b2af4cf"
+    },
+    {
+      "file": "app/assets/rma/diagrams/privacy-boundary/v0.1.1/privacy-boundary.svg",
+      "sha256": "08e7892a4bfe28f921e0f28c4619025298eaface9debb25df5574768078e2229"
+    },
+    {
+      "file": "app/assets/rma/diagrams/return-timeline/v0.1.0/return-timeline.svg",
+      "sha256": "4eb96cdbf77794b53d33a1a702f1c6268e20660fb3017791db8e4e291a8b5385"
+    },
+    {
+      "file": "app/assets/rma/illustrations/arrival-threshold/v0.1.0/arrival-threshold.svg",
+      "sha256": "d98ddf3a1ea7610865dff8c61d14fbb7caabdb12f9034608574d964feec1bb88"
+    },
+    {
+      "file": "app/assets/rma/plates/contemporary-riverbank/v0.1.0/contemporary-riverbank.svg",
+      "sha256": "7e84dec5b03e6679b67d0804dbd699f0d6996f3943b77885b14fe5cb675e7585"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/another-perspective.svg",
+      "sha256": "da5e7f0f50bde63462a53358512709dee011a0ae0c35a5fc1a27c5bc0bd008b7"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/divided-group.svg",
+      "sha256": "a90e5d3fe65ad4e4cb9c8bba7a932be58d41b41b688664150993ab2cd54f11c9"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/just-curious.svg",
+      "sha256": "d70f325d888fed7bd3e80e1d65891f9bcc525700f26e984a72618ff06019ec06"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/personal-tension.svg",
+      "sha256": "8587bf4635848e4283f289d372f79c4b021e7068052865de551f03647442eb9f"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/seeing-differently.svg",
+      "sha256": "7cc4cc4f115c11fc736be12d27c3e2249e2dffca33eae41ce046c0eb18cedbe2"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/seen-or-heard.svg",
+      "sha256": "780f22b86062df75544bec449e6b4a4740f0606b1b080ffa029719ee48b17f1d"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/self-understanding.svg",
+      "sha256": "13fdefc53796cb9c4c8074ff5face6034cb850d8024ddcec775a92db015345d0"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/uncertainty.svg",
+      "sha256": "fdd6496c53c810c0359d13f38e5984c5396cb3d63cc6e33573a05a0d7de5eb19"
+    },
+    {
+      "file": "app/assets/rma/plates/door-deck/v0.1.3/values-tension.svg",
+      "sha256": "9d23e2699f2dd0dbc95f1d4e128a6ca1c4101083925ee1f115c3b2c081c29826"
+    }
+  ],
+  "sample_times": [
+    3,
+    11,
+    20,
+    29,
+    36,
+    45,
+    52,
+    60,
+    67,
+    74.8,
+    75.2,
+    76,
+    83,
+    91,
+    101,
+    112,
+    122,
+    132,
+    141,
+    149,
+    156
+  ]
+}
