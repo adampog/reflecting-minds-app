@@ -1,4 +1,4 @@
-# OpenRig brief v4: a new door-2 scenario, several ways to reflect, take a side or mediate
+# OpenRig brief v4: two door-2 candidates, several ways to reflect, take a side or mediate
 
 Prepared 2 November 2026 for rig `01M5FK5RNCFB3PQK3GDR5K7ZG7`
 Seats: `app-claude@reflecting-minds-app` · `app-codex@reflecting-minds-app`
@@ -6,8 +6,8 @@ Seats: `app-claude@reflecting-minds-app` · `app-codex@reflecting-minds-app`
 Supersedes brief v3 of 26 October. The v3 mockup (commit `bff18b8`, branch `v3-three-doors`,
 Codex QA PASS, 26 October) is the baseline. Branch from it.
 
-> **Door-2 scenario: Option A, *The inquiry*. PROVISIONAL, waiting for Alan's pick.**
-> Do not queue this brief until this line names a final choice. Build only the option it names.
+> **Door 2: build two candidates, Option A *The inquiry* and Option B *The bedside*, so Jake can
+> choose between them.** This is Alan's pick, made 2 November. Don't build Option C.
 
 ---
 
@@ -62,9 +62,10 @@ here should work against that aim, and nothing here should try to build it.
    All seven stages, all three involvement routes (fictional, personal, neutral), the developed
    story, the stance choice, and the reflection menu with at least two strategies working end to
    end. **Time the cost stage by stage** (see Cost).
-2. **The door-2 scenario** (the option named at the top) to entry depth plus: the developed story,
-   its plate, the stance choice, the reflection menu, one strategy all the way through, and a plain
-   end point.
+2. **Two door-2 candidates, *The inquiry* and *The bedside*.** Build each to entry depth plus: the
+   developed story, its plate, the stance choice, the reflection menu, one strategy all the way
+   through, and a plain end point. Show them in the viewer as two equal candidates for Jake to
+   choose between, with neither listed first by default.
 3. **Two births, deepened:** the developed story, the reflection menu, one strategy through, and a
    plain end point. Add the leaning switch (idea 3) as a viewer toggle, off by default.
 4. The tap-through viewer, a silent walkthrough under five minutes **with captions throughout**,
@@ -75,8 +76,8 @@ Take *The riverbank* out of the door deck, but keep its assets in the art librar
 abstracted riverbank image (river, mountains, two people from behind), and it may suit a later
 scenario.
 
-**If the budget runs short**, work in this order and report what was cut: (1) the door-2
-scenario through the stance choice; (2) *The well* full build with its cost; (3) the reflection
+**If the budget runs short**, work in this order and report what was cut: (1) both door-2
+candidates through the stance choice; (2) *The well* full build with its cost; (3) the reflection
 menu; (4) the leaning switch on *Two births*. Codex weekly usage reset on 2 November.
 
 ---
@@ -87,10 +88,11 @@ What Jake asked for: two groups read the same evidence and disagree about what i
 real emotional pull. In his words, "word these carefully so as not to take sides, but allow for
 strong emotional reactions". There must be no hidden right answer.
 
-There are three options. Alan picks one before this brief is queued, and the rig builds only that
-one. The stories are drafts: refine them, but keep both sides at equal weight.
+There are three options here. **Alan's pick (2 Nov): build A and B, so Jake can choose between
+them. Don't build C.** It stays here for the record. The stories are drafts: refine them, but
+keep both sides at equal weight.
 
-### Option A: *The inquiry* (recommended)
+### Option A: *The inquiry* (build)
 
 Jake's first example. It involves two groups, so it carries the stance choice. It is not a
 medical scene, so it doesn't sit beside *Two births* as a second one.
@@ -112,7 +114,7 @@ can't be told without that, report it rather than forcing it. Plate ideas: the h
 dusk with one lit window, a ledger open on a table, two groups seen from behind at either end of
 the quay.
 
-### Option B: *The bedside*
+### Option B: *The bedside* (build)
 
 Jake's second example, kept to the end-of-life case. The beginning-of-life version maps straight
 onto a live political and religious dispute, which §6 rules out, so don't build it.
@@ -132,7 +134,7 @@ entry that says what the scenario contains, and get a safety read before publica
 religious markers, and make no medical claim that settles it. Plate ideas: a hospital window at
 evening, an empty chair beside a bed, a corridor seen from a distance.
 
-### Option C: *The last letter*
+### Option C: *The last letter* (not built)
 
 This is not one of Jake's examples, but he said he is open to others. It carries the lowest risk
 of the three.
@@ -178,7 +180,7 @@ seven stages. If one doesn't fit, report that rather than bending it.
 
 ## Take a side or mediate (ideas 2 and 3)
 
-**Group scenarios** (*The well*, and the door-2 scenario). After the context and before the
+**Group scenarios** (*The well*, and both door-2 candidates). After the context and before the
 reflection menu, ask: "Where would you like to stand?"
 
 - With *[side one, in a plain phrase: "the families nearest the well"]*
@@ -244,9 +246,9 @@ flooded, and no one else can reach them tonight. Both labours have started. She 
 assets.
 
 1. **Send an asset list first.** Send it to the art producer, and list only what is new: the
-   door-2 scenario's plate (and loop, if wanted), the recoloured door plates, and any plate for
-   *The well* or *Two births* that the deepened stories or the stance choice need.
-   Use the plate ideas in this brief as the starting point.
+   plate for each door-2 candidate (and loop, if wanted), the recoloured door plates, and any
+   plate for *The well* or *Two births* that the deepened stories or the stance choice need. Use
+   the plate ideas in this brief as the starting point.
 2. **Wait for Alan's go-ahead** on that list before anything is made. This is the same route as
    the v3 art release on 26 October.
 3. **Until then, build with labelled placeholders**, so the art doesn't hold up the build. Reuse
@@ -277,7 +279,8 @@ three doors to be priced. This round:
   difficulty. Nobody has decided this. Answer it again (question 7).
 - About 20 seconds of the v3 walkthrough had no captions. This time captions cover the whole
   walkthrough.
-- *Two births* and the door-2 scenario both need a safety read before publication.
+- *Two births* and both door-2 candidates need a safety read before publication, *The bedside*
+  most of all.
 
 ---
 
@@ -319,8 +322,9 @@ The reviewing seat answers directly:
    invitation or like a checklist? Is there any sign of counting, progress or completion?
 2. In each stance, does the authored text take a side? Is the mediator shown as the better
    choice? Is "rather not pick" a real option?
-3. The door-2 scenario: does it have the pull Jake asked for? Could it be read as a real current
-   case, or does it carry a political or religious marker? Is either side easier to pick?
+3. For each door-2 candidate: does it have the pull Jake asked for? Could it be read as a real
+   current case, or does it carry a political or religious marker? Is either side easier to pick?
+   Which candidate do the seats think is stronger, and why? (Jake chooses.)
 4. Did the added sentences bring depth without implying an outcome? In *The well*, does either
    need now read as the easier one to pick? (v3 left this open for the picture.)
 5. Is there a face anywhere? Can any figure be read as a particular age, class, ethnicity or
@@ -348,6 +352,6 @@ with the eight questions answered, and any recorded disagreement.
 
 **Don't post to `#all-reflecting-minds` yourselves.** Return the branch, the commit, and every
 deliverable's path and SHA256. Post only when `advisor-lead@kernel` says so, after Alan has given
-his own word. When the post goes up, it ends with the three questions for Jake: does the door-2
-scenario work, should the reflection menu and the stance choice stay, and should the leaning
+his own word. When the post goes up, it ends with the three questions for Jake: which door-2
+candidate should replace *The riverbank*, should the reflection menu and the stance choice stay, and should the leaning
 switch on *Two births* stay or go.
