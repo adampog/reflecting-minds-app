@@ -234,12 +234,23 @@ flooded, and no one else can reach them tonight. Both labours have started. She 
 - Where two sides appear, they must read as two distinct groups without faces, through place,
   grouping and distance. The v3 character sheets made two surveyors look like one man and two
   families like one family.
-- Alan found the v3 character sheets too generic and wants more colour. Bring more colour to the
+- Alan found the v3 character sheets too generic and wants more colour. Put more colour on the
   door plates, and keep "bright at the door, quiet in the room".
-- Art comes from the art department, as in v3. Reuse the v3 stills for *The well*, *Two births*
-  and the entry courtyard where they still fit, and save every new plate to the shared art library.
 - The still comes first and works on its own. Video is optional, and `prefers-reduced-motion` gets
   the still.
+
+**Where the art comes from.** The seats do not generate images or video. Under Alan's rule of
+23 October, art comes from `art-producer@shared-art-assets`, which makes it as reusable library
+assets.
+
+1. **Send an asset list first.** Send it to the art producer, and list only what is new: the
+   door-2 scenario's plate (and loop, if wanted), the recoloured door plates, and any plate for
+   *The well* or *Two births* that the deepened stories or the stance choice need.
+   Use the plate ideas in this brief as the starting point.
+2. **Wait for Alan's go-ahead** on that list before anything is made. This is the same route as
+   the v3 art release on 26 October.
+3. **Until then, build with labelled placeholders**, so the art doesn't hold up the build. Reuse
+   the v3 stills for *The well*, *Two births* and the entry courtyard where they still fit.
 
 ---
 
@@ -251,7 +262,8 @@ three doors to be priced. This round:
 
 - Time *The well* stage by stage as you go. Open an interval when a stage starts, close it when it
   ends, and keep authoring, art, build and QA separate.
-- Count image and video generation calls per scenario.
+- Per scenario, record the art assets requested and delivered, with the art producer's time as it
+  reports it. Keep that time separate from seat-hours.
 - Record API credit spend per scenario if the rig can read it. If it can't, say so. Don't convert
   hours into money.
 - From *The well*'s per-stage figures, estimate what it would take to build all three doors fully.
@@ -332,7 +344,10 @@ choice and the leaning switch become requirements. R5 and R6 entering a spec.
 
 **What done looks like.** A branch (suggested name `v4-ways-to-reflect`) with the viewer, the
 rendered walkthrough, *The well*'s per-stage cost record and the three-door estimate, the QA pass
-with the eight questions answered, and any recorded disagreement. Post the result to
-`#all-reflecting-minds` with the commit name, and end with the three questions for Jake: does the
-door-2 scenario work, should the reflection menu and the stance choice stay, and should the
-leaning switch on *Two births* stay or go.
+with the eight questions answered, and any recorded disagreement.
+
+**Don't post to `#all-reflecting-minds` yourselves.** Return the branch, the commit, and every
+deliverable's path and SHA256. Post only when `advisor-lead@kernel` says so, after Alan has given
+his own word. When the post goes up, it ends with the three questions for Jake: does the door-2
+scenario work, should the reflection menu and the stance choice stay, and should the leaning
+switch on *Two births* stay or go.
